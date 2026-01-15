@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SNS 공유 시 profile.png가 보이도록 설정 -->
+    <meta property="og:title" content="기호 1번 김백건 | 대한약학대학학생협회 제36대 협회장 후보">
+    <meta property="og:description" content="당당한 실력, 존중받는 내일! 기호 1번 김백건입니다.">
+    <meta property="og:image" content="profile.png">
+    
+    <title>기호 1번 김백건 | 대한약학대학학생협회 제36대 협회장 후보</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fonts (Noto Sans KR) -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        body { font-family: 'Noto Sans KR', sans-serif; }
+        .bg-navy { background-color: #0f172a; }
+        .text-navy { color: #0f172a; }
+        html { scroll-behavior: smooth; }
+        
+        /* Fade In Animation */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translate3d(0, -10px, 0); }
+            to { opacity: 1; transform: translate3d(0, 0, 0); }
+        }
+        .animate-fade-in-down { animation: fadeInDown 0.3s ease-out; }
+
+        /* Experience Timeline Line Styling */
+        .timeline-line {
+            width: 4px;
+            background: linear-gradient(to bottom, #dbeafe 0%, #0f172a 20%, #0f172a 80%, #dbeafe 100%);
+        }
+        
+        /* Background Letters for CORE */
+        .bg-letter {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 15rem;
+            font-weight: 900;
+            color: #0f172a;
+            opacity: 0.04;
+            z-index: 0;
+            pointer-events: none;
+            line-height: 1;
+            font-family: sans-serif;
+        }
+
+        /* Highlight Effect */
+        .highlight {
+            background: linear-gradient(120deg, #dbeafe 0%, #dbeafe 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 40%;
+            background-position: 0 88%;
+            font-weight: 700;
+            color: #1e3a8a;
+        }
+
+        /* Slider Styling */
+        .slider-container {
+            overflow: hidden;
+            position: relative;
+            /* touch-action: pan-y allows vertical scrolling but lets us capture horizontal swipes */
+            touch-action: pan-y; 
+        }
+        .slider-track {
+            display: flex;
+            transition: transform 0.3s ease-out; /* Faster transition for touch feel */
+        }
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+            padding: 0 1rem;
+        }
+        .slide-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+        }
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased overflow-x-hidden text-sm md:text-base">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-14 md:h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <span class="font-black text-lg md:text-xl text-navy tracking-tighter whitespace-nowrap">KIM BACK GUN</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex space-x-6 xl:space-x-8">
+                    <a href="#home" class="text-slate-600 hover:text-navy font-bold transition text-sm whitespace-nowrap">Home</a>
+                    <a href="#keynote" class="text-slate-600 hover:text-navy font-bold transition text-sm whitespace-nowrap">1. 출마소견서</a>
+                    <a href="#roadmap" class="text-slate-600 hover:text-navy font-bold transition text-sm whitespace-nowrap">2. Project Roadmap</a>
+                    <a href="#core" class="text-slate-600 hover:text-navy font-bold transition text-sm whitespace-nowrap">3. CORE PROJECT</a>
+                    <a href="#beyond" class="text-slate-600 hover:text-navy font-bold transition text-sm whitespace-nowrap">4. BEYOND PROJECT</a>
+                    <a href="#experience" class="text-slate-600 hover:text-navy font-bold transition text-sm whitespace-nowrap">5. 약력&주요활동</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden">
+                    <button onclick="toggleMobileMenu()" class="text-navy p-2 focus:outline-none">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-100 absolute w-full left-0 top-14 shadow-lg animate-fade-in-down">
+            <div class="px-4 pt-2 pb-4 space-y-1">
+                <a href="#home" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-navy hover:bg-slate-50">Home</a>
+                <a href="#keynote" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-navy hover:bg-slate-50">1. 출마소견서</a>
+                <a href="#roadmap" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-navy hover:bg-slate-50">2. Project Roadmap</a>
+                <a href="#core" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-navy hover:bg-slate-50">3. CORE PROJECT</a>
+                <a href="#beyond" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-navy hover:bg-slate-50">4. BEYOND PROJECT</a>
+                <a href="#experience" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-navy hover:bg-slate-50">5. 약력&주요활동</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center bg-navy overflow-hidden pt-24 pb-16 md:pt-32 md:pb-24">
+        <!-- Background Blobs -->
+        <div class="absolute top-0 left-0 w-full h-full opacity-10">
+            <div class="absolute top-[-10%] right-[-10%] w-80 h-80 rounded-full bg-blue-400 blur-3xl"></div>
+            <div class="absolute bottom-[-10%] left-[-10%] w-96 h-96 rounded-full bg-indigo-500 blur-3xl"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center justify-center h-full" data-aos="fade-up" data-aos-duration="1000">
+            <!-- Profile -->
+            <div class="mb-6 mt-4 md:mt-0" data-aos="zoom-in" data-aos-delay="200">
+                <div class="w-60 h-60 md:w-80 md:h-80 rounded-full border-4 border-white/10 shadow-2xl mx-auto overflow-hidden bg-slate-800 flex items-center justify-center">
+                    <img src="profile.png" alt="기호 1번 김백건" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentNode.innerHTML='<i class=\'w-24 h-24 text-slate-600\' data-lucide=\'user\'></i>'">
+                </div>
+                <div class="mt-6 px-5 py-2 rounded-full bg-white/10 backdrop-blur-sm inline-block border border-white/5">
+                    <p class="text-blue-200 font-bold text-sm md:text-base">✨ 당당한 실력, 존중받는 내일! 기호 1번 김백건입니다.</p>
+                </div>
+            </div>
+
+            <p class="text-indigo-200 font-bold tracking-widest mb-3 text-xs md:text-sm uppercase">대한약학대학학생협회 제36대 협회장 후보</p>
+            <h1 class="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-5">
+                약대생의 성장이 곧<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-indigo-100">약사의 미래입니다</span>
+            </h1>
+            
+            <p class="text-slate-300 text-base md:text-xl mb-8 font-light leading-relaxed max-w-2xl mx-auto">
+                "협회는 방향을 말하는 데서 멈추지 않고,<br class="hidden md:block"> 
+                실제로 도달하는 <strong>내일을 준비하는 조직</strong>이어야 합니다."
+            </p>
+            
+            <!-- Buttons -->
+            <div class="grid grid-cols-2 md:flex md:flex-row justify-center gap-3 w-full max-w-xl mx-auto px-4 sm:px-0">
+                <button onclick="openPoster()" class="px-4 py-3 border-2 border-indigo-400 text-indigo-200 font-bold rounded-lg hover:bg-indigo-500/20 hover:text-white transition text-xs md:text-sm flex items-center justify-center gap-1 whitespace-nowrap">
+                    <i data-lucide="image" class="w-4 h-4"></i> 포스터 보기
+                </button>
+                <a href="#roadmap" class="px-4 py-3 border-2 border-slate-500 text-slate-300 font-bold rounded-lg hover:border-white hover:text-white transition text-xs md:text-sm flex items-center justify-center whitespace-nowrap">
+                    로드맵
+                </a>
+                <a href="#core" class="px-4 py-3 bg-white text-navy font-bold rounded-lg shadow-xl hover:bg-slate-100 transition transform hover:scale-105 text-xs md:text-sm flex items-center justify-center whitespace-nowrap">
+                    공약 자세히 보기
+                </a>
+                <a href="#experience" class="px-4 py-3 bg-navy border-2 border-white/20 text-white font-bold rounded-lg hover:bg-slate-800 transition text-xs md:text-sm flex items-center justify-center whitespace-nowrap">
+                    약력&주요활동
+                </a>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-8 animate-bounce text-slate-400 hidden md:block">
+            <i data-lucide="chevron-down" class="w-6 h-6"></i>
+        </div>
+    </section>
+
+    <!-- 1. 출마소견서 -->
+    <section id="keynote" class="py-20 md:py-28 bg-white relative">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-black text-navy">1. 출마소견서</h2>
+                <p class="text-lg text-slate-500 mt-3">기호 1번 김백건의 약속</p>
+            </div>
+
+            <!-- Slider Box -->
+            <div class="bg-slate-50 p-8 md:p-12 rounded-3xl border-l-8 border-navy shadow-lg relative group" data-aos="fade-up" data-aos-delay="100">
+                <i data-lucide="quote" class="absolute top-8 left-8 w-10 h-10 text-slate-200 fill-current"></i>
+                
+                <div class="slider-container relative">
+                    <div class="slider-track" id="statement-track">
+                        <!-- Slide 1 -->
+                        <div class="slide">
+                            <div class="space-y-6 text-base md:text-lg leading-relaxed text-slate-700">
+                                <p class="font-bold text-navy">안녕하십니까. 대한약학대학학생협회 회원 여러분. 제36대 협회장 선거 후보자 김백건입니다.</p>
+                                <p>지난 1년간 약대협에 속하여 약대생을 위하는 방향을 고민하였으며, 그 끝에 변화하는 시대 속에서 협회가 나아가야 할 길을 분명히 확인하였습니다.</p>
+                                <p>그 어느 때보다 약사 직능의 다변화에 대한 숙고와 노력이 필요한 시점입니다. 여러 현안 속 약사의 직능이 도전받고 있으며, 급변하는 AI 시대 속에 보건의료의 패러다임이 변하고 있습니다.</p>
+                                <p>이러한 위기를 잘 대처하기 위해서는 우리의 본질에 더욱더 집중해야 한다고 생각합니다. 무릇 우리 약대생의 본질이란 사회가 요구하는 실력과 인성을 함양하는 것이라 생각합니다. 그리고 그 기준은 급변하는 시대 속에서 더욱 높아지고 있습니다.</p>
+                                <p class="font-bold text-navy pt-2">저 김백건은 위 문제의식 아래 '당당한 실력, 존중받는 내일'이라는 슬로건으로 다음의 세 가지 방향을 제안합니다.</p>
+                                <p class="text-right text-sm text-blue-500 font-bold mt-4 cursor-pointer hover:text-navy transition-colors flex justify-end items-center gap-1" onclick="moveSlide(1)">
+                                    (다음 장으로 넘겨주세요 →)
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="slide">
+                            <div class="space-y-6 text-base md:text-lg leading-relaxed text-slate-700">
+                                <div class="space-y-4">
+                                    <p><strong>첫째, 기본 실력을 보장하고, 사회적 가치를 실천하는 약대협</strong><br>Study Toolkit, Micro degree 도입을 통해 약대생의 본질인 실력을 보장하고, 통합돌봄 사업 참여와 찾아가는 스쿨 멘토링 등으로 사회적 책무를 실천하겠습니다.</p>
+                                    <p><strong>둘째, 진로 경험을 확대하고, 목소리를 내어 선도하는 약대협</strong><br>협회는 약대생 사회의 방향을 제시하고, 각 학교의 요구를 하나의 목소리로 모아 실현해야 합니다. KPSA 직무현장체험 패키지로 진로 체험 기회를 보장하고, 현안대응 데이터베이스 구축과 대정부 정책자료집으로 목소리를 내겠습니다.</p>
+                                    <p><strong>셋째, 약학도를 하나로 묶어 세계로 나아가는 약대협</strong><br>전국 약대생 간 연대를 공고히 하고, 국제 교류를 통해 활동 범위를 세계로 확장하겠습니다. ‘하나되는 약대협’ 정책을 통해 결속력을 높이고, 글로벌 환경을 이해하는 약대생으로의 성장을 지원하겠습니다.</p>
+                                </div>
+                                <p class="mt-6 font-medium text-navy">우리의 실력이 곧 국민의 신뢰가 됩니다. 약대생의 한 명 한 명의 성장이 모여, 약사가 지속적으로 존경받는 사회를 만듭시다. 냉철한 지성과 뜨거운 실력으로 미래를 준비하는 약대협, 저 김백건이 시작하겠습니다.</p>
+                                <p class="text-right text-sm text-slate-400 mt-4 cursor-pointer hover:text-navy transition-colors md:hidden" onclick="moveSlide(0)">(← 이전 장으로)</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Navigation Arrows -->
+                    <button onclick="prevSlide()" class="absolute left-0 top-1/2 -translate-y-1/2 -ml-4 md:-ml-8 p-2 rounded-full bg-white text-navy hover:bg-slate-100 shadow-md transition-all z-10 hidden md:flex items-center justify-center border border-slate-100">
+                        <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                    </button>
+                    <button onclick="nextSlide()" class="absolute right-0 top-1/2 -translate-y-1/2 -mr-4 md:-mr-8 p-2 rounded-full bg-white text-navy hover:bg-slate-100 shadow-md transition-all z-10 hidden md:flex items-center justify-center border border-slate-100">
+                        <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                    </button>
+                </div>
+
+                <!-- Dots -->
+                <div class="slide-dots">
+                    <div class="dot active bg-navy" onclick="moveSlide(0)"></div>
+                    <div class="dot bg-slate-300" onclick="moveSlide(1)"></div>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-slate-200 flex items-center justify-end gap-3">
+                    <span class="font-bold text-navy text-lg">기호 1번 김백건</span>
+                    <div class="w-10 h-10 rounded-full bg-slate-200 overflow-hidden">
+                        <img src="profile.png" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Project Roadmap -->
+    <section id="roadmap" class="py-16 md:py-20 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-10" data-aos="fade-up">
+                <span class="text-blue-600 font-bold text-xs tracking-widest uppercase">Overview</span>
+                <h2 class="text-2xl md:text-4xl font-bold text-navy mt-1">2. Project Roadmap</h2>
+                <p class="text-slate-500 mt-3 text-sm md:text-base">김백건이 그리는 약대생 사회의 전체 구조입니다.</p>
+            </div>
+            
+            <div class="flex justify-center" data-aos="zoom-in">
+                <div class="bg-white rounded-3xl shadow-xl border border-slate-100 p-4 md:p-8 flex items-center justify-center max-w-4xl w-full relative overflow-hidden group">
+                    <img src="roadmap.png" alt="Project Roadmap" class="w-full h-auto object-contain">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. CORE PROJECT -->
+    <section id="core" class="py-20 md:py-28 bg-white relative">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-black text-navy">3. CORE PROJECT</h2>
+                <p class="text-xl text-slate-500 mt-4">협회의 기본 역할을 다시 정리합니다</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                <!-- Competence -->
+                <div class="bg-slate-50 p-8 rounded-2xl border-l-4 border-indigo-600 hover:shadow-2xl transition-all duration-300 group relative overflow-hidden cursor-pointer" onclick="openPolicyModal('competence')" data-aos="fade-right">
+                    <div class="bg-letter">C</div>
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-indigo-600 transition-colors">
+                            <i data-lucide="book-open" class="w-6 h-6 text-indigo-600 group-hover:text-white transition-colors"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-navy mb-1">Competence</h3>
+                        <!-- [수정] 서브타이틀 변경 -->
+                        <p class="text-indigo-600 font-medium mb-3">자격에 걸맞는 실력으로</p>
+                        <p class="text-slate-600 leading-relaxed mb-4 text-sm">약대생의 본질은 실력에 있습니다. 그 기준이 높아지는 시대에서 협회는 실력을 지원하겠습니다.</p>
+                        <ul class="list-disc pl-5 space-y-2 marker:text-indigo-500 text-slate-700 font-medium text-sm mb-4">
+                            <li><span class="highlight">Pharm Study Toolkit 제작</span></li>
+                            <li><span class="highlight">Pharm MicroDegree 도입</span></li>
+                        </ul>
+                        <button class="text-sm font-bold text-slate-400 flex items-center gap-1 hover:text-navy mt-auto">
+                            상세 내용 팝업 보기 <i data-lucide="external-link" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Opportunity -->
+                <div class="bg-slate-50 p-8 rounded-2xl border-l-4 border-blue-600 hover:shadow-2xl transition-all duration-300 group relative overflow-hidden cursor-pointer" onclick="openPolicyModal('opportunity')" data-aos="fade-left">
+                    <div class="bg-letter">O</div>
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-blue-600 transition-colors">
+                            <i data-lucide="sprout" class="w-6 h-6 text-blue-600 group-hover:text-white transition-colors"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-navy mb-1">Opportunity</h3>
+                        <!-- [수정] 서브타이틀 변경 -->
+                        <p class="text-blue-600 font-medium mb-3">강의실을 넘어 현장으로</p>
+                        <ul class="list-disc pl-5 space-y-2 marker:text-blue-500 text-slate-700 font-medium text-sm mb-4">
+                            <li>약학 창업 프로그램 STEP UP</li>
+                            <li>KPSA 직무현장체험 패키지</li>
+                            <li><span class="highlight">제약사 × KPSA 과제 해결 경진대회</span></li>
+                            <li>커리어 인터뷰 아카이빙</li>
+                        </ul>
+                        <button class="text-sm font-bold text-slate-400 flex items-center gap-1 hover:text-navy mt-auto">
+                            상세 내용 팝업 보기 <i data-lucide="external-link" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Responsibility -->
+                <div class="bg-slate-50 p-8 rounded-2xl border-l-4 border-emerald-600 hover:shadow-2xl transition-all duration-300 group relative overflow-hidden cursor-pointer" onclick="openPolicyModal('responsibility')" data-aos="fade-right">
+                    <div class="bg-letter">R</div>
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-emerald-600 transition-colors">
+                            <i data-lucide="handshake" class="w-6 h-6 text-emerald-600 group-hover:text-white transition-colors"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-navy mb-1">Responsibility</h3>
+                        <!-- [수정] 서브타이틀 변경 -->
+                        <p class="text-emerald-600 font-medium mb-3">약사의 사회적 가치를 실천으로</p>
+                         <ul class="list-disc pl-5 space-y-2 marker:text-emerald-500 text-slate-700 font-medium text-sm mb-4">
+                            <li>다제약물관리사업 약대생 참여 모델 구축</li>
+                            <li><span class="highlight">통합돌봄 사업 연계 참여</span></li>
+                            <li>찾아가는 스쿨 멘토링</li>
+                        </ul>
+                        <button class="text-sm font-bold text-slate-400 flex items-center gap-1 hover:text-navy mt-auto">
+                            상세 내용 팝업 보기 <i data-lucide="external-link" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Engagement -->
+                <div class="bg-slate-50 p-8 rounded-2xl border-l-4 border-rose-600 hover:shadow-2xl transition-all duration-300 group relative overflow-hidden cursor-pointer" onclick="openPolicyModal('engagement')" data-aos="fade-left">
+                    <div class="bg-letter">E</div>
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 bg-rose-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-rose-600 transition-colors">
+                            <i data-lucide="megaphone" class="w-6 h-6 text-rose-600 group-hover:text-white transition-colors"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-navy mb-1">Engagement</h3>
+                        <!-- [수정] 서브타이틀 변경 -->
+                        <p class="text-rose-600 font-medium mb-3">세상을 바꾸는 우리의 목소리로</p>
+                        <ul class="list-disc pl-5 space-y-2 marker:text-rose-500 text-slate-700 font-medium text-sm mb-4">
+                            <!-- [수정] 현안 대응 DB -> 현안 대응 DB 및 패스트트랙 구축 -->
+                            <li>현안 대응 DB 및 패스트트랙 구축</li>
+                            <li><span class="highlight">약대협 대정부 정책자료집 발간</span></li>
+                            <li>KPSA 소통 채널 혁신</li>
+                        </ul>
+                        <button class="text-sm font-bold text-slate-400 flex items-center gap-1 hover:text-navy mt-auto">
+                            상세 내용 팝업 보기 <i data-lucide="external-link" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. BEYOND PROJECT -->
+    <section id="beyond" class="py-20 md:py-28 bg-navy text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-blue-500 rounded-full blur-3xl opacity-20 transform translate-x-1/2 -translate-y-1/2"></div>
+        
+        <div class="max-w-6xl mx-auto px-4 relative z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-black">4. BEYOND PROJECT</h2>
+                <p class="text-xl text-slate-300 mt-4">지금을 넘어 다음을 준비합니다</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                <!-- Global Insight -->
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-3xl border border-white/10 hover:bg-white/20 transition cursor-pointer" onclick="openPolicyModal('global')" data-aos="flip-up">
+                    <i data-lucide="globe" class="w-10 h-10 text-blue-300 mb-5"></i>
+                    <h3 class="text-2xl font-bold mb-1">Global Insight</h3>
+                    <p class="text-blue-200 font-medium mb-3">글로벌 역량을 갖춘 약대생으로</p>
+                     <ul class="list-disc pl-5 space-y-2 marker:text-blue-300 text-slate-200 font-medium text-sm mb-4">
+                        <li><span class="text-yellow-300">G-Bridge 프로젝트 운영</span></li>
+                        <li>약대생 실전 영어 가이드북 제작</li>
+                    </ul>
+                    <button class="text-sm font-bold text-slate-400 flex items-center gap-1 hover:text-white mt-auto">
+                        상세 내용 팝업 보기 <i data-lucide="external-link" class="w-4 h-4"></i>
+                    </button>
+                </div>
+
+                <!-- Community & Culture -->
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-3xl border border-white/10 hover:bg-white/20 transition cursor-pointer" onclick="openPolicyModal('community')" data-aos="flip-up" data-aos-delay="200">
+                    <i data-lucide="users" class="w-10 h-10 text-pink-300 mb-5"></i>
+                    <h3 class="text-2xl font-bold mb-1">Community & Culture</h3>
+                    <p class="text-pink-200 font-medium mb-3">하나되는 약대생, 즐거운 연대로</p>
+                    <ul class="list-disc pl-5 space-y-2 marker:text-pink-300 text-slate-200 font-medium text-sm mb-4">
+                        <!-- [수정] 유튜브 앰배서더 -> 유튜브 활성화&앰배서더 모집 -->
+                        <li><span class="text-yellow-300">KPSA 유튜브 활성화&앰배서더 모집</span></li>
+                        <li>하나되는 약대협</li>
+                        <!-- [수정] 공약 추가 -->
+                        <li>지역 경계 없는 약대협</li>
+                    </ul>
+                    <button class="text-sm font-bold text-slate-400 flex items-center gap-1 hover:text-white mt-auto">
+                        상세 내용 팝업 보기 <i data-lucide="external-link" class="w-4 h-4"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. 약력 & 주요활동 (Experience) -->
+    <section id="experience" class="py-20 md:py-28 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-black text-navy">5. 약력&주요활동</h2>
+                <p class="text-slate-500 mt-2">클릭하여 각 활동의 상세 보고를 확인하세요</p>
+            </div>
+            
+            <div class="relative pl-8 md:pl-0">
+                <!-- Timeline Central Line -->
+                <div class="timeline-line absolute left-8 md:left-1/2 top-0 bottom-0 -ml-[2px] md:-ml-[2px]"></div>
+                
+                <!-- Exp Item 1 (학생회장 2025) -->
+                <div class="relative mb-12 cursor-pointer group" onclick="openExpModal('student_council')">
+                    <div class="md:flex items-center justify-between w-full">
+                        <div class="pl-12 md:pl-0 md:w-[45%] mb-4 md:mb-0 md:text-right md:pr-8" data-aos="fade-right">
+                            <h3 class="text-xl font-bold text-navy group-hover:text-blue-600 transition">前 강원대학교 제37대 약학대학 학생회장</h3>
+                            <span class="text-blue-500 text-sm font-bold">2025</span>
+                        </div>
+                        <div class="absolute left-0 md:left-1/2 w-4 h-4 bg-navy rounded-full border-4 border-white shadow-md z-10 -ml-[6px] md:-ml-[8px] group-hover:scale-150 group-hover:bg-blue-600 transition-all duration-300"></div>
+                        <div class="pl-12 md:pl-8 md:w-[45%]" data-aos="fade-left">
+                            <p class="text-slate-600 text-sm bg-slate-50 p-4 rounded-xl border border-slate-100 group-hover:shadow-md transition">
+                                제1회 청춘藥속, 북플리마켓 아카이빙, 실무실습 제도 개선 등<br>
+                                <span class="text-blue-500 text-xs font-bold mt-2 inline-block">👆 클릭해서 상세 활동 보기</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exp Item 2 (정보통신국 차장 2025) -->
+                <div class="relative mb-12 cursor-pointer group" onclick="openExpModal('it_bureau')">
+                    <div class="md:flex items-center justify-between w-full flex-row-reverse">
+                        <div class="pl-12 md:pl-8 md:w-[45%] mb-4 md:mb-0 md:text-left" data-aos="fade-left">
+                            <h3 class="text-xl font-bold text-navy group-hover:text-blue-600 transition">前 약대협 정보통신국 차장</h3>
+                            <span class="text-blue-500 text-sm font-bold">2025</span>
+                        </div>
+                        <div class="absolute left-0 md:left-1/2 w-4 h-4 bg-navy rounded-full border-4 border-white shadow-md z-10 -ml-[6px] md:-ml-[8px] group-hover:scale-150 group-hover:bg-blue-600 transition-all duration-300"></div>
+                        <div class="pl-12 md:pr-8 md:w-[45%] md:text-right" data-aos="fade-right">
+                            <p class="text-slate-600 text-sm bg-slate-50 p-4 rounded-xl border border-slate-100 group-hover:shadow-md transition">
+                                정책 아이디어톤, 건보공단 견학, 팜포럼 등 다양한 국서 행사 기사 작성<br>
+                                <span class="text-blue-500 text-xs font-bold mt-2 inline-block">👆 클릭해서 상세 활동 보기</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exp Item 3 (중운위) -->
+                <div class="relative mb-12 cursor-pointer group" onclick="openExpModal('steering')">
+                    <div class="md:flex items-center justify-between w-full">
+                        <div class="pl-12 md:pl-0 md:w-[45%] mb-4 md:mb-0 md:text-right md:pr-8" data-aos="fade-right">
+                            <h3 class="text-xl font-bold text-navy group-hover:text-blue-600 transition">現 약대협 중앙운영위원</h3>
+                            <span class="text-blue-500 text-sm font-bold">Current</span>
+                        </div>
+                        <div class="absolute left-0 md:left-1/2 w-4 h-4 bg-navy rounded-full border-4 border-white shadow-md z-10 -ml-[6px] md:-ml-[8px] group-hover:scale-150 group-hover:bg-blue-600 transition-all duration-300"></div>
+                        <div class="pl-12 md:pl-8 md:w-[45%]" data-aos="fade-left">
+                            <p class="text-slate-600 text-sm bg-slate-50 p-4 rounded-xl border border-slate-100 group-hover:shadow-md transition">
+                                병역 제도 관련 대외 정책 논의 참여 등<br>
+                                <span class="text-blue-500 text-xs font-bold mt-2 inline-block">👆 클릭해서 상세 활동 보기</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Full Bio Toggle -->
+            <div class="text-center">
+                <button onclick="toggleBio()" id="bio-btn" class="inline-flex items-center gap-2 px-6 py-3 bg-slate-100 hover:bg-slate-200 text-slate-600 font-bold rounded-full transition-all group">
+                    <span>전체 약력 펼쳐보기</span>
+                    <i data-lucide="chevron-down" class="w-4 h-4 group-hover:translate-y-1 transition-transform"></i>
+                </button>
+            </div>
+
+            <div id="full-bio" class="hidden mt-8 transition-all duration-500 ease-in-out">
+                <div class="bg-slate-50 rounded-3xl p-6 md:p-10 border border-slate-200">
+                    <h3 class="text-xl font-bold text-navy mb-6 flex items-center gap-2">
+                        <i data-lucide="history" class="w-5 h-5 text-slate-400"></i> Full Biography
+                    </h3>
+                    
+                    <div class="space-y-4 text-sm md:text-base text-left">
+                         <!-- Current -->
+                         <div class="border-l-2 border-blue-500 pl-4 py-1">
+                            <span class="inline-block px-2 py-0.5 rounded text-xs font-bold bg-blue-100 text-blue-700 mb-1">Current</span>
+                            <ul class="space-y-2 text-slate-700">
+                                <li><span class="font-bold text-navy">現</span> 대한약학대학학생협회 35기 중앙운영위원</li>
+                                <li><span class="font-bold text-navy">現</span> 대한약학대학학생협회 35기 약사정책대응 TF팀 약사법 팀원</li>
+                            </ul>
+                        </div>
+
+                        <!-- Association & Student Council -->
+                        <div class="border-l-2 border-slate-300 pl-4 py-1">
+                            <span class="inline-block px-2 py-0.5 rounded text-xs font-bold bg-slate-200 text-slate-600 mb-1">Student Council & Association</span>
+                            <ul class="space-y-2 text-slate-600">
+                                <li class="font-semibold text-slate-800"><span class="font-medium text-slate-500">2025</span> 강원대학교 제37대 약학대학 학생회장</li>
+                                <li><span class="font-medium text-slate-500">2025</span> 대한약학대학학생협회 35기 집행위원회 정보통신국 차장</li>
+                                <li><span class="font-medium text-slate-500">前</span> 대한약학대학학생협회 35기 동부지부 체육대회 기획단 사무팀장</li>
+                                <li><span class="font-medium text-slate-500">前</span> 대한약학대학학생협회 35기 동부지부 학생회 LT 기획단 사무팀장</li>
+                                <li><span class="font-medium text-slate-500">前</span> 2025 강원대학교 생활협동조합 학생 대의원</li>
+                                <li><span class="font-medium text-slate-500">2023</span> 강원대학교 제35대 약학대학 학생회 'PharmUs' 소통협력국장</li>
+                                <li><span class="font-medium text-slate-500">2022</span> 강원대학교 제34대 약학대학 학생회 'With:U' 기획국원</li>
+                                <li><span class="font-medium text-slate-500">2017</span> 강릉고등학교 제57대 학생회 부학생회장</li>
+                            </ul>
+                        </div>
+
+                        <!-- Extra Activities -->
+                        <div class="border-l-2 border-slate-300 pl-4 py-1">
+                            <span class="inline-block px-2 py-0.5 rounded text-xs font-bold bg-slate-200 text-slate-600 mb-1">Activities</span>
+                            <ul class="space-y-2 text-slate-600">
+                                <li><span class="font-medium text-slate-500">前</span> 2025 강원대학교 약학대학 총동문회 동문탐방기 기자단</li>
+                                <li><span class="font-medium text-slate-500">前</span> 2025 강원대학교 약학대학 유튜브 기획단원</li>
+                            </ul>
+                        </div>
+
+                        <!-- Academic & Personal -->
+                        <div class="border-l-2 border-slate-300 pl-4 py-1">
+                            <span class="inline-block px-2 py-0.5 rounded text-xs font-bold bg-slate-200 text-slate-600 mb-1">Education & Personal</span>
+                            <ul class="space-y-2 text-slate-600">
+                                <li><span class="font-medium text-slate-500">2022</span> 강원대학교 약학대학 약학과 입학</li>
+                                <li><span class="font-medium text-slate-500">2021</span> 대한민국 육군 병장 만기 전역</li>
+                                <li><span class="font-medium text-slate-500">2020</span> 한양대학교 수학과 입학</li>
+                                <li><span class="font-medium text-slate-500">2019</span> 강릉고등학교 수석 졸업</li>
+                                <li><span class="font-medium text-slate-500">2000</span> 강원도 강릉시 출생</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- More Details -->
+    <section class="py-16 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-xl md:text-2xl font-bold text-navy mb-6">More Details</h2>
+            <div class="flex flex-col sm:flex-row justify-center gap-3">
+                <button class="flex items-center justify-center gap-2 px-6 py-3 bg-white border border-slate-200 rounded-xl shadow-sm hover:shadow-md transition text-slate-700 font-bold text-sm whitespace-nowrap">
+                    <i data-lucide="file-text" class="w-4 h-4 text-red-500"></i>
+                    정책 제안서 (PDF) 다운로드
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer & Closing -->
+    <section id="contact" class="py-20 bg-navy text-white text-center">
+        <div class="max-w-4xl mx-auto px-4" data-aos="zoom-in">
+            
+            <!-- Closing Message -->
+            <div class="mb-16">
+                <i data-lucide="message-circle" class="w-10 h-10 mx-auto mb-6 text-slate-400"></i>
+                <h2 class="text-2xl md:text-4xl font-bold mb-4">"존중받는 직능은,<br>준비된 집단에서 나옵니다."</h2>
+                <p class="text-blue-200 text-lg md:text-xl font-medium">여러분의 소중한 한 표가, 약대생 사회의 '내일'을 만듭니다.</p>
+            </div>
+
+            <!-- Divider -->
+            <div class="w-16 h-1 bg-white/20 mx-auto mb-16"></div>
+
+            <!-- Team Info Header -->
+            <h3 class="text-lg md:text-xl font-bold mb-8 text-white/90">
+                여러분의 소중한 한 표가, 약대생 사회의 '다음'을 만듭니다.<br>
+                궁금한 점이 있다면 언제든 말을 걸어주세요.
+            </h3>
+            
+            <!-- Team List (Aligned) -->
+            <div class="bg-white/10 rounded-2xl p-8 mb-10 text-left max-w-2xl mx-auto">
+                <!-- 선본 정보 추가 (가운데 정렬) -->
+                <div class="mb-6 text-center border-b border-white/10 pb-4">
+                    <p class="font-bold text-white text-lg">대한약학대학학생협회 제36대 협회장 선거</p>
+                    <p class="font-bold text-white text-lg">기호 1번 김백건 선거운동본부</p>
+                </div>
+
+                <p class="mb-4 text-center md:text-left"><strong class="text-blue-300">선본장 :</strong> 황지명 <span class="text-slate-300 text-sm">(조선대학교)</span></p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-y-3 gap-x-8">
+                    <p><strong class="text-blue-300">선본원 :</strong> 김인혁 <span class="text-slate-300 text-sm">(성균관대학교)</span></p>
+                    <p><strong class="text-blue-300">선본원 :</strong> 이태계 <span class="text-slate-300 text-sm">(서울대학교)</span></p>
+                    <p><strong class="text-blue-300">선본원 :</strong> 송명하 <span class="text-slate-300 text-sm">(동덕여자대학교)</span></p>
+                    <p><strong class="text-blue-300">선본원 :</strong> 정연석 <span class="text-slate-300 text-sm">(우석대학교)</span></p>
+                </div>
+            </div>
+
+            <div class="flex justify-center gap-5 mb-10">
+                <a href="https://www.instagram.com/kpsa_36th_election1" target="_blank" class="flex items-center gap-2 text-pink-300 hover:text-white transition px-4 py-2 border border-pink-300/30 rounded-full hover:bg-pink-300/10">
+                    <i data-lucide="instagram" class="w-5 h-5"></i>
+                    @kpsa_36th_election1
+                </a>
+            </div>
+            
+            <div class="text-xs text-slate-500">
+                <!-- 띄어쓰기 수정 -->
+                &copy; 2026 대한약학대학학생협회 협회장 선거 기호 1번 김백건 선거운동본부. All rights reserved.
+            </div>
+        </div>
+    </section>
+
+    <!-- [Modals] -->
+    
+    <!-- Poster Modal -->
+    <div id="poster-modal" class="fixed inset-0 z-[100] bg-black/90 hidden flex items-center justify-center p-4 backdrop-blur-sm transition-opacity duration-300 opacity-0" onclick="closePoster()">
+        <div class="relative max-w-4xl w-full max-h-[90vh] flex flex-col items-center">
+            <button onclick="closePoster()" class="absolute -top-12 right-0 text-white hover:text-gray-300 transition p-2">
+                <i data-lucide="x" class="w-8 h-8"></i>
+            </button>
+            <img src="poster.png" alt="기호 1번 김백건 포스터" class="w-full h-auto max-h-[85vh] object-contain rounded-lg shadow-2xl" onclick="event.stopPropagation()" onerror="this.parentElement.innerHTML='<div class=\'text-white text-center\'>포스터 이미지가 없습니다.<br>poster.png 파일을 폴더에 넣어주세요.</div>'">
+        </div>
+    </div>
+
+    <!-- Policy Detail Modal -->
+    <div id="policy-modal" class="fixed inset-0 z-[110] bg-black/50 hidden flex items-center justify-center p-4 backdrop-blur-sm transition-opacity duration-300 opacity-0" onclick="closePolicyModal()">
+        <div class="bg-white w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden transform transition-all scale-95 max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
+            <div class="bg-navy p-6 text-white relative sticky top-0 z-20">
+                <span id="policy-tag" class="inline-block px-2 py-1 bg-white/20 rounded text-xs font-bold mb-2">Category</span>
+                <h3 id="policy-title" class="text-2xl font-bold">Policy Title</h3>
+                <p id="policy-subtitle" class="text-blue-200 text-sm mt-1">Subtitle</p>
+                <button onclick="closePolicyModal()" class="absolute top-4 right-4 text-white/70 hover:text-white">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <div class="p-6 md:p-8">
+                <div id="policy-content" class="text-slate-700 leading-relaxed text-sm md:text-base space-y-4">
+                    <!-- Dynamic Content -->
+                </div>
+                <div class="mt-8 pt-4 border-t border-slate-100 flex justify-end">
+                    <button onclick="closePolicyModal()" class="px-5 py-2.5 bg-navy text-white rounded-lg hover:bg-slate-800 font-bold text-sm">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Experience Detail Modal (Detailed Activities) -->
+    <div id="exp-modal" class="fixed inset-0 z-[110] bg-black/50 hidden flex items-center justify-center p-4 backdrop-blur-sm transition-opacity duration-300 opacity-0" onclick="closeExpModal()">
+        <div class="bg-white w-full max-w-3xl rounded-2xl shadow-2xl overflow-hidden transform transition-all scale-95 max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
+            <div class="bg-navy p-6 text-white relative sticky top-0 z-20">
+                <h3 id="exp-title" class="text-2xl font-bold">Activity Title</h3>
+                <button onclick="closeExpModal()" class="absolute top-4 right-4 text-white/70 hover:text-white">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <div class="p-6 md:p-8 text-slate-700 text-sm leading-relaxed" id="exp-content">
+                <!-- Content will be injected here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        lucide.createIcons();
+        AOS.init({ once: true, offset: 80, duration: 800 });
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+            }
+        }
+
+        // Slider Logic (Touch & Click)
+        let currentSlide = 0;
+        const totalSlides = 2; 
+        let touchStartX = 0;
+        let touchEndX = 0;
+        const track = document.getElementById('statement-track');
+
+        // Touch Events for Swipe with 30px Threshold for better sensitivity
+        track.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+            // Reset end to prevent sticky values from previous swipes
+            touchEndX = e.changedTouches[0].screenX;
+        }, {passive: true});
+
+        track.addEventListener('touchmove', e => {
+            touchEndX = e.changedTouches[0].screenX;
+        }, {passive: true});
+
+        track.addEventListener('touchend', e => {
+            handleGesture();
+        }, {passive: true});
+
+        function handleGesture() {
+            // Lowered threshold to 30px for more responsive swipe
+            const threshold = 30; 
+            const swipeDistance = touchEndX - touchStartX;
+
+            if (swipeDistance < -threshold) nextSlide(); // Swipe Left (Next)
+            if (swipeDistance > threshold) prevSlide(); // Swipe Right (Prev)
+        }
+
+        function moveSlide(index) {
+            if (index < 0) index = 0;
+            if (index >= totalSlides) index = totalSlides - 1;
+            
+            const dots = document.querySelectorAll('.dot');
+            currentSlide = index;
+            
+            track.style.transform = `translateX(-${index * 100}%)`;
+            
+            dots.forEach(d => {
+                d.classList.remove('active', 'bg-navy');
+                d.classList.add('bg-slate-300');
+            });
+            dots[index].classList.add('active', 'bg-navy');
+            dots[index].classList.remove('bg-slate-300');
+        }
+
+        function nextSlide() { moveSlide(currentSlide + 1); }
+        function prevSlide() { moveSlide(currentSlide - 1); }
+
+        // Toggle Biography
+        function toggleBio() {
+            const bioSection = document.getElementById('full-bio');
+            const btn = document.getElementById('bio-btn');
+            const btnText = btn.querySelector('span');
+            const btnIcon = btn.querySelector('i');
+            
+            if (bioSection.classList.contains('hidden')) {
+                bioSection.classList.remove('hidden');
+                btnText.textContent = '약력 접기';
+                btnIcon.style.transform = 'rotate(180deg)';
+            } else {
+                bioSection.classList.add('hidden');
+                btnText.textContent = '전체 약력 펼쳐보기';
+                btnIcon.style.transform = 'rotate(0deg)';
+                document.getElementById('experience').scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Modals Logic
+        function openPoster() {
+            const modal = document.getElementById('poster-modal');
+            modal.classList.remove('hidden');
+            setTimeout(() => modal.classList.remove('opacity-0'), 10);
+            document.body.style.overflow = 'hidden';
+        }
+        function closePoster() {
+            const modal = document.getElementById('poster-modal');
+            modal.classList.add('opacity-0');
+            setTimeout(() => modal.classList.add('hidden'), 300);
+            document.body.style.overflow = 'auto';
+        }
+
+        // Policy Data & Modal
+        const policyData = {
+            'opportunity': {
+                title: 'Opportunity',
+                subtitle: '강의실을 넘어 현장으로',
+                content: `
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-bold text-lg text-navy mb-2">1. 약학 창업 프로그램 STEP UP (3단계 완결형)</h4>
+                            <ul class="list-disc pl-5 space-y-1 text-slate-700">
+                                <li><strong>STEP 1:</strong> 문제 정의·아이디어 설계 (약학 기반)</li>
+                                <li><strong>STEP 2:</strong> 소규모 MVP·PoC 실습</li>
+                                <li><strong>STEP 3:</strong> 외부 창업지원·인턴십·데모데이 연계</li>
+                            </ul>
+                            <p class="mt-2 text-blue-600 font-bold text-xs bg-blue-50 inline-block px-2 py-1 rounded">📌 임기 내 목표: 실행형 프로젝트 최소 2팀 배출, 결과물 아카이빙</p>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div>
+                            <h4 class="font-bold text-lg text-navy mb-2">2. KPSA 직무현장체험 패키지</h4>
+                            <ul class="list-disc pl-5 space-y-1 text-slate-700">
+                                <li>공공·병원·제약·산업 약사 직무별 표준 체험 패키지 제작</li>
+                                <li>기관 견학 + 사전 직무 가이드 + 사후 리포트 구조</li>
+                            </ul>
+                            <p class="mt-2 text-blue-600 font-bold text-xs bg-blue-50 inline-block px-2 py-1 rounded">📌 임기 내 목표: 직무별 패키지 문서화 및 반복 운영 구조 확립</p>
+                        </div>
+                         <hr class="border-slate-100">
+                        <div>
+                            <h4 class="font-bold text-lg text-navy mb-2">3. 제약사 × KPSA 과제 해결 경진대회</h4>
+                            <ul class="list-disc pl-5 space-y-1 text-slate-700">
+                                <li>실제 제약·바이오 기업의 현업 과제 기반 문제 해결</li>
+                                <li>단순 발표가 아닌 해결 프로세스 중심 평가</li>
+                            </ul>
+                            <p class="mt-2 text-blue-600 font-bold text-xs bg-blue-50 inline-block px-2 py-1 rounded">📌 결과물: 우수 과제 사례집 제작 → 차기 기수 활용</p>
+                        </div>
+                         <hr class="border-slate-100">
+                        <div>
+                            <h4 class="font-bold text-lg text-navy mb-2">4. 커리어 인터뷰 아카이빙</h4>
+                            <ul class="list-disc pl-5 space-y-1 text-slate-700">
+                                <li>직무별 약사·선배 인터뷰를 영상/텍스트로 체계화</li>
+                                <li>일회성 콘텐츠가 아닌 검색·열람 가능한 DB 구축</li>
+                            </ul>
+                            <p class="mt-2 text-blue-600 font-bold text-xs bg-blue-50 inline-block px-2 py-1 rounded">📌 임기 내 목표: 최소 5직무 인터뷰 공개</p>
+                        </div>
+                    </div>
+                `
+            },
+            'responsibility': {
+                title: 'Responsibility',
+                subtitle: '약사의 사회적 가치를 실천으로',
+                content: `
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-bold text-lg text-navy mb-2">1. 다제약물관리사업 약대생 참여 모델 구축</h4>
+                            <ul class="list-disc pl-5 space-y-1 text-slate-700">
+                                <li>단순 참관이 아닌 학생 참여 가능한 역할 범위 명확화</li>
+                                <li>표준 활동 가이드 제작</li>
+                            </ul>
+                            <p class="mt-2 text-emerald-600 font-bold text-xs bg-emerald-50 inline-block px-2 py-1 rounded">📌 임기 내 목표: 참여 프로토콜 문서화 및 지역 확산</p>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div>
+                            <h4 class="font-bold text-lg text-navy mb-2">2. 통합돌봄 사업 연계 참여</h4>
+                            <ul class="list-disc pl-5 space-y-1 text-slate-700">
+                                <li>지역 통합돌봄 현장에서 약대생이 수행 가능한 역할 중심 참여</li>
+                            </ul>
+                            <p class="mt-2 text-emerald-600 font-bold text-xs bg-emerald-50 inline-block px-2 py-1 rounded">📌 결과물: 약대생 참여 사례 정리본 제작</p>
+                        </div>
+                         <hr class="border-slate-100">
+                        <div>
+                            <h4 class="font-bold text-lg text-navy mb-2">3. 찾아가는 스쿨 멘토링</h4>
+                            <ul class="list-disc pl-5 space-y-1 text-slate-700">
+                                <li>약대생이 약학 진로·보건의료 역할을 설명하는 멘토</li>
+                                <li>단발 행사가 아닌 학교별 운영 매뉴얼 제공</li>
+                            </ul>
+                            <p class="mt-2 text-emerald-600 font-bold text-xs bg-emerald-50 inline-block px-2 py-1 rounded">📌 임기 내 목표: 반복 가능한 멘토링 모델 구축</p>
+                        </div>
+                    </div>
+                `
+            },
+            'competence': {
+                title: 'Competence',
+                subtitle: '자격에 걸맞는 실력으로',
+                content: `
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-bold text-lg text-navy mb-2">1. Pharm Study Toolkit 제작</h4>
+                            <ul class="list-disc pl-5 space-y-1 text-slate-700">
+                                <li>시험·실습·논문·자료 정리 방법을 담은 공식 학습 도구</li>
+                            </ul>
+                            <p class="mt-2 text-indigo-600 font-bold text-xs bg-indigo-50 inline-block px-2 py-1 rounded">📌 결과물: 디지털 파일 + 배포</p>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div>
+                            <h4 class="font-bold text-lg text-navy mb-2">2. Pharm Microdegree 도입</h4>
+                            <ul class="list-disc pl-5 space-y-1 text-slate-700">
+                                <li>약학 외 확장 역량(데이터, 정책, 산업 등) 단기 인증형 과정</li>
+                                <li>이수 기준·결과 명확화</li>
+                            </ul>
+                            <p class="mt-2 text-indigo-600 font-bold text-xs bg-indigo-50 inline-block px-2 py-1 rounded">📌 임기 내 목표: 최소 3개 트랙 운영</p>
+                        </div>
+                    </div>
+                `
+            },
+            'engagement': {
+                title: 'Engagement',
+                subtitle: '세상을 바꾸는 우리의 목소리로',
+                content: `
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-bold text-lg text-navy mb-2">1. 현안 대응 DB 및 패스트트랙 구축</h4>
+                            <ul class="list-disc pl-5 space-y-1 text-slate-700">
+                                <li>약사사회 주요 이슈에 대한 사실·논리·자료 정리 DB</li>
+                            </ul>
+                            <p class="mt-2 text-rose-600 font-bold text-xs bg-rose-50 inline-block px-2 py-1 rounded">📌 목표: 즉각 활용 가능한 대응 자료집 완성</p>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div>
+                            <h4 class="font-bold text-lg text-navy mb-2">2. 약대협 대정부 정책자료집 발간</h4>
+                            <ul class="list-disc pl-5 space-y-1 text-slate-700">
+                                <li>실제 전달을 전제로 한 공식 정책 문서</li>
+                            </ul>
+                            <p class="mt-2 text-rose-600 font-bold text-xs bg-rose-50 inline-block px-2 py-1 rounded">📌 결과물: 공개 가능한 정책자료집 1권</p>
+                        </div>
+                         <hr class="border-slate-100">
+                        <div>
+                            <h4 class="font-bold text-lg text-navy mb-2">3. KPSA 소통 채널 혁신</h4>
+                            <ul class="list-disc pl-5 space-y-1 text-slate-700">
+                                <li>단순 공지 채널이 아닌 의견 수렴 → 반영 구조 명시</li>
+                            </ul>
+                            <p class="mt-2 text-rose-600 font-bold text-xs bg-rose-50 inline-block px-2 py-1 rounded">📌 임기 내 목표: 정기 피드백 루프 정착</p>
+                        </div>
+                    </div>
+                `
+            },
+            'global': {
+                title: 'Global Insight',
+                subtitle: '글로벌 역량을 갖춘 약대생으로',
+                content: `
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-bold text-lg text-navy mb-2">1. G-Bridge 프로젝트</h4>
+                            <ul class="list-disc pl-5 space-y-1 text-slate-700">
+                                <li>무리한 정례화 대신 선택형 글로벌 교류</li>
+                            </ul>
+                            <p class="mt-2 text-blue-400 font-bold text-xs bg-blue-50 inline-block px-2 py-1 rounded">📌 결과물: 참여 후기·자료 아카이빙</p>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div>
+                            <h4 class="font-bold text-lg text-navy mb-2">2. 약대생 실전 영어 가이드북 제작</h4>
+                            <ul class="list-disc pl-5 space-y-1 text-slate-700">
+                                <li>해외 자료·컨퍼런스·실습 대응 중심</li>
+                            </ul>
+                            <p class="mt-2 text-blue-400 font-bold text-xs bg-blue-50 inline-block px-2 py-1 rounded">📌 결과물: PDF 가이드북 완성</p>
+                        </div>
+                    </div>
+                `
+            },
+            'community': {
+                title: 'Community & Culture',
+                subtitle: '하나되는 약대생, 즐거운 연대로',
+                content: `
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-bold text-lg text-navy mb-2">1. KPSA 유튜브 활성화&앰배서더 모집</h4>
+                            <ul class="list-disc pl-5 space-y-1 text-slate-700">
+                                <li>단순 홍보가 아닌 약대생 콘텐츠 생산 주체</li>
+                            </ul>
+                            <p class="mt-2 text-pink-500 font-bold text-xs bg-pink-50 inline-block px-2 py-1 rounded">📌 결과물: 고정 코너 운영</p>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div>
+                            <h4 class="font-bold text-lg text-navy mb-2">2. 하나되는 약대협</h4>
+                            <ul class="list-disc pl-5 space-y-1 text-slate-700">
+                                <li>지역·학교 경계 없는 참여 구조 설계</li>
+                            </ul>
+                            <p class="mt-2 text-pink-500 font-bold text-xs bg-pink-50 inline-block px-2 py-1 rounded">📌 메시지: “누가 하느냐보다, 누구나 할 수 있게”</p>
+                        </div>
+                         <hr class="border-slate-100">
+                        <div>
+                            <h4 class="font-bold text-lg text-navy mb-2">3. 지역 경계 없는 약대협</h4>
+                            <ul class="list-disc pl-5 space-y-1 text-slate-700">
+                                <li>수도권 집중 구조 탈피, 권역별 교류 프로그램 강화</li>
+                            </ul>
+                            <p class="mt-2 text-pink-500 font-bold text-xs bg-pink-50 inline-block px-2 py-1 rounded">📌 목표: 균형 잡힌 약대생 문화 정착</p>
+                        </div>
+                    </div>
+                `
+            }
+        };
+
+        function openPolicyModal(key) {
+            const data = policyData[key];
+            if (!data) return;
+            document.getElementById('policy-tag').textContent = '상세 공약';
+            document.getElementById('policy-title').textContent = data.title;
+            document.getElementById('policy-subtitle').textContent = data.subtitle;
+            document.getElementById('policy-content').innerHTML = data.content;
+            openModal('policy-modal');
+        }
+        function closePolicyModal() { closeModal('policy-modal'); }
+
+        // Experience Data & Modal
+        const expData = {
+            'student_council': {
+                title: '前 강원대학교 제37대 약학대학 학생회장',
+                content: `
+                    <div class="space-y-8">
+                        <!-- 1. 청춘약속 -->
+                        <div>
+                            <h4 class="font-bold text-xl text-navy mb-3">1. 제1회 청춘藥속 개최</h4>
+                            <img src="exp1_1.png" class="w-full md:w-3/5 h-auto rounded-lg my-4 shadow-sm mx-auto object-cover" alt="청춘약속 메인 이미지">
+                            
+                            <div class="space-y-2">
+                                <p class="text-sm md:text-base"><strong class="text-blue-600 block mb-1 text-lg">활동 배경</strong>
+                                기존 학생회 운영 구조상 학기 중 대규모 행사를 추가로 기획·운영하는 데 한계가 있었고, 이로 인해 1학기에는 약학대학 전체가 함께하는 핵심 행사가 부재했습니다. 그 결과 학생 간 교류가 학년·소그룹 단위로 고착화되는 경향이 나타났으며, 자연스러운 소통과 연대의 장을 마련할 필요성이 분명해졌습니다.</p>
+                            </div>
+
+                            <div class="space-y-2 mt-4">
+                                <p class="text-sm md:text-base"><strong class="text-blue-600 block mb-1 text-lg">활동 내용</strong>
+                                <!-- Side by side -->
+                                <div class="grid grid-cols-2 gap-2 my-2 md:w-3/5 md:mx-auto">
+                                    <img src="exp1_2.png" class="w-full h-auto rounded shadow-sm object-cover">
+                                    <img src="exp1_3.png" class="w-full h-auto rounded shadow-sm object-cover">
+                                </div>
+                                학년 구분 없이 누구나 부담 없이 참여할 수 있는 교류형 행사로 ‘제1회 청춘藥속’을 기획·운영했습니다. 접근성을 최우선으로 고려해 약학관 주차장을 행사 공간으로 선정하고, 학장단·학과사무실·인근 단과대학과의 공식 협조를 통해 수업 직후 바로 참여할 수 있는 동선을 구축했습니다.<br>
+                                행사는 체험형 부스와 학년 혼합 교류 프로그램을 중심으로 구성했습니다. 다양한 참여형 부스를 운영하고, 동아리 부스를 별도로 구성해 학생 자치 조직이 함께 참여할 수 있도록 했습니다. 또한 2인 단위 신청 후 학년을 섞은 조 편성을 통해 식사와 레크리에이션을 함께 진행하며 자연스러운 교류가 이루어지도록 설계했습니다.</p>
+                            </div>
+
+                            <div class="space-y-2 mt-4">
+                                <p class="text-sm md:text-base"><strong class="text-blue-600 block mb-1 text-lg">성과 및 의의</strong>
+                                <img src="exp1_4.png" class="w-full md:w-3/5 h-auto rounded-lg my-2 shadow-sm mx-auto object-cover">
+                                전체 재학생 약 300명 중 130명 이상이 참여하며, 학기 중 핵심 교류 행사로서 실질적인 참여를 이끌어냈습니다. 교내 사업 공모를 통해 지원금을 확보하고, 교내 단체 간 협력을 통해 물품을 대여함으로써 예산을 효율적으로 운영했습니다. 해당 행사는 영상 콘텐츠로 기록되어 학생들의 체감을 높였으며, 차기 학생회 공약으로 이어져 지속 가능한 행사로 정착할 기반을 마련했습니다.<br>
+                                청춘藥속은 학생 간 교류가 자연스럽게 확장될 수 있음을 확인한 계기였으며, 공동체 문화는 의도적으로 설계될 때 형성된다는 확신을 주었습니다. 이 경험을 통해 교류와 소통은 부수적인 요소가 아니라 조직을 하나로 묶는 핵심이라는 인식을 갖게 되었고, 이는 유튜브 활성화, 지역 경계 없는 교류, 하나로 연결되는 약대협을 지향하는 Community & Culture 공약으로 이어지게 되었습니다.</p>
+                            </div>
+                        </div>
+
+                        <hr class="border-slate-200">
+
+                        <!-- 2. 북플리마켓 -->
+                        <div>
+                            <h4 class="font-bold text-xl text-navy mb-3">2. 북플리마켓 아카이빙 체계 구축</h4>
+                            <img src="exp2_1.png" class="w-full md:w-3/5 h-auto rounded-lg my-4 shadow-sm mx-auto object-cover">
+                            
+                            <!-- Side by side -->
+                            <div class="grid grid-cols-2 gap-2 my-4 md:w-3/5 md:mx-auto">
+                                <img src="exp2_2.png" class="w-full h-auto rounded shadow-sm object-cover">
+                                <img src="exp2_3.png" class="w-full h-auto rounded shadow-sm object-cover">
+                            </div>
+
+                            <div class="space-y-4">
+                                <p class="text-sm md:text-base"><strong class="text-blue-600 block mb-1 text-lg">활동 배경</strong>
+                                학생회 사업이 담당자나 집행부에 따라 단절되며, 매년 동일한 혼선이 반복되는 구조적 한계를 체감했습니다. 단순히 행사를 잘 치르는 것을 넘어, 기록과 기준이 남지 않으면 성과가 축적되지 않는다는 문제의식이 생겼습니다.</p>
+
+                                <p class="text-sm md:text-base"><strong class="text-blue-600 block mb-1 text-lg">활동 내용</strong>
+                                강원대학교 약학대학 학생회장으로서 북플리마켓 운영을 계기로, 학생회 자산과 사업을 아카이빙하는 방식의 필요성을 인식하고 실행했습니다. 누적된 교재를 전수 조사해 도서명·판수·버전 기준으로 정리하고 문서화했으며, 학생 수요에 맞지 않는 오래된 판수는 정리해 관리 기준을 명확히 했습니다. 이후 다른 학생회 활동에서도 자료 정리와 기록을 우선하는 운영 방식을 적용했습니다.</p>
+
+                                <p class="text-sm md:text-base"><strong class="text-blue-600 block mb-1 text-lg">성과 및 의의</strong>
+                                학생회 사업이 개인의 기억이 아닌 데이터와 기록으로 이어질 수 있는 구조를 마련했습니다. 이 경험을 통해 아카이빙과 DB 구축이 학생자치의 연속성을 만든다는 확신을 갖게 되었고, 이는 이후 협회 차원의 공약으로 구체화되는 출발점이 되었습니다.</p>
+                            </div>
+                        </div>
+
+                        <hr class="border-slate-200">
+
+                        <!-- 3. 실무실습 -->
+                        <div>
+                            <h4 class="font-bold text-xl text-navy mb-3">3. 실무실습 제도 개선 건의 및 간담회 추진</h4>
+                            
+                            <div class="space-y-4">
+                                <p class="text-sm md:text-base"><strong class="text-blue-600 block mb-1 text-lg">활동 배경</strong>
+                                2025년 학생회장으로 활동하며 실무실습을 준비·수행하는 학생들이 반복적으로 혼란과 불편을 겪고 있음을 확인했습니다. 실습지 배정, 숙소 정보, 예방접종 안내 등 주요 사안이 충분히 공유되지 않은 채 진행되면서, 학생들이 제도의 문제를 개인의 부담으로 감내하고 있다는 점이 가장 큰 문제라고 느꼈습니다. 이는 단순한 불만이 아니라 학생사회 차원에서 공식적으로 전달되어야 할 현안이라고 판단했습니다.</p>
+
+                                <p class="text-sm md:text-base"><strong class="text-blue-600 block mb-1 text-lg">활동 내용</strong>
+                                실습을 경험한 학생들의 의견을 체계적으로 수렴하였고, 이를 정리하여 학생회 명의로 학장님과 학과장님께 직접 방문해 공식적으로 건의드렸습니다. 이 과정에서 학생들의 개별 불만이 아닌, 공통적으로 반복된 구조적 문제임을 중심으로 설명하였으며, 이후 교수진과 학생 간의 오해를 줄이고 논의를 이어가기 위해 간담회 형식의 대화 자리를 제안·추진하였습니다. 이후 학생회와 교수진이 함께 참여하는 간담회로 확장하여 해당 사안들을 공유하고 논의했습니다.</p>
+
+                                <p class="text-sm md:text-base"><strong class="text-blue-600 block mb-1 text-lg">성과 및 의의</strong>
+                                학생들의 현안이 비공식적인 불만 제기를 넘어, 학교 차원의 공식 논의 안건으로 다뤄지는 계기가 마련되었습니다. 특히 간담회 형식을 통해 학생 의견이 직접 전달되면서 제도 개선에 대한 공감대가 형성되었고, 일부 사안은 실제 제도 개편 논의로 이어졌습니다. 이 경험을 통해 학생사회의 문제는 관심에서 그치는 것이 아니라, 의견을 수렴하고 정리해 적절한 의사결정 주체에게 전달할 때 변화로 이어질 수 있다는 점을 분명히 체감하게 되었습니다.</p>
+                            </div>
+                            <img src="exp3_1.png" class="w-full md:w-3/5 h-auto rounded-lg my-4 shadow-sm mx-auto object-cover">
+                        </div>
+                    </div>
+                `
+            },
+            'it_bureau': {
+                title: '前 약대협 정보통신국 차장',
+                content: `
+                    <div class="space-y-8">
+                        <div>
+                            <h4 class="font-bold text-xl text-navy mb-3">1. 제2회 약대생 정책 아이디어톤 공식 기사 작성</h4>
+                            <img src="exp_it_1.png" class="w-full md:w-3/5 h-auto rounded-lg my-4 shadow-sm mx-auto object-cover">
+                            
+                            <div class="space-y-4">
+                                <p class="text-sm md:text-base"><strong class="text-blue-600 block mb-1 text-lg">활동 개요</strong>
+                                약대협 정책국 주관으로 진행된 제2회 약대생 정책 아이디어톤 현장에 참여하여, 행사 전반과 학생 정책 제안을 정리한 공식 기사 작성을 담당했습니다.</p>
+
+                                <p class="text-sm md:text-base"><strong class="text-blue-600 block mb-1 text-lg">역할 및 활동 내용</strong>
+                                무박 2일간 진행된 정책 아이디어톤 전 과정을 현장에서 함께하며, 정책 강연, 팀별 토론, 발표 및 심사 과정을 직접 확인했습니다. 참가 학생들의 발표 내용을 녹음·정리하여 핵심 정책 제안을 축약·가공했고, 심사위원단의 평가와 코멘트를 반영해 기사로 구성했습니다. 완성된 기사는 약대협 KPSA의 정책 활동을 외부에 정확히 전달하는 데 초점을 두고 작성했습니다.</p>
+
+                                <p class="text-sm md:text-base"><strong class="text-blue-600 block mb-1 text-lg">성과 및 의의</strong>
+                                작성된 기사는 약사공론과 데일리팜 등 주요 약업계 언론에 게재되어, 약대생 정책 논의가 학생사회 내부를 넘어 약업계와 전문가 집단에 공유되는 계기를 마련했습니다. 특히 일부 심사위원은 학생들의 정책 아이디어를 실제 정책 논의에 참고했다고 언급하며, 약대생 정책 제안의 실질적 가능성을 확인했습니다. 이를 통해 약대협 정책 활동이 기록과 아카이빙을 넘어, 장기적으로 대정부 정책자료로 확장될 수 있는 기반을 보여주었습니다.</p>
+                            </div>
+                        </div>
+
+                        <hr class="border-slate-200">
+
+                        <div>
+                            <h4 class="font-bold text-xl text-navy mb-3">2. 국민건강보험공단 견학 참석 및 기사 작성</h4>
+                            <img src="exp_it_2.png" class="w-full md:w-3/5 h-auto rounded-lg my-4 shadow-sm mx-auto object-cover">
+                            
+                            <div class="space-y-4">
+                                <p class="text-sm md:text-base"><strong class="text-blue-600 block mb-1 text-lg">활동 개요</strong>
+                                약대협 정보통신국 차장으로서 국민건강보험공단 견학 프로그램에 참석하고, 해당 활동을 기사로 정리·발행함.</p>
+
+                                <p class="text-sm md:text-base"><strong class="text-blue-600 block mb-1 text-lg">활동 내용</strong>
+                                국민건강보험공단 견학 프로그램에 참석하여 공단에서 약사의 역할과 주요 업무, 윤리 교육을 중심으로 한 연사 강연을 청취하고 질의응답에 참여했습니다. 이후 인근 전시관을 방문해 노인복지 및 건강 관련 보조기기를 관람하며, 약대생의 전공이 사회 현장에서 어떻게 활용되는지를 직접 체감했습니다. 이러한 경험을 바탕으로 프로그램의 구성과 의미를 정리해 기사로 작성하였으며, 현장에 참여하지 못한 약대생들도 공공기관 진로와 업무 환경을 이해할 수 있도록 내용을 전달했습니다.</p>
+
+                                <p class="text-sm md:text-base"><strong class="text-blue-600 block mb-1 text-lg">성과 및 의의</strong>
+                                현장에 참석하지 못한 다수의 약대생들도 국민건강보험공단이라는 기관의 역할과 근무 환경, 사회적 책임에 대해 간접적으로 이해할 수 있는 계기를 만들었습니다. 이 경험을 통해 단순한 기관 소개와 기사 작성뿐만 아니라, ‘그곳에서 실제로 어떤 하루를 보내는지’를 전달하는 콘텐츠의 필요성을 분명히 느꼈고, 이후 약대생들이 다양한 조직과 직무를 보다 입체적으로 경험할 수 있는 현장 중심 진로 프로그램을 구상하게 되는 계기가 되었습니다.</p>
+                            </div>
+                        </div>
+
+                        <hr class="border-slate-200">
+
+                        <div>
+                            <h4 class="font-bold text-xl text-navy mb-3">3. 2025 한국약학대학생 학술제(CoPharmForum) 참석 및 기사 작성</h4>
+                            <img src="exp_it_3.png" class="w-full md:w-3/5 h-auto rounded-lg my-4 shadow-sm mx-auto object-cover">
+                            
+                            <div class="space-y-4">
+                                <p class="text-sm md:text-base"><strong class="text-blue-600 block mb-1 text-lg">활동 개요</strong>
+                                약대협 정보통신국 차장으로서 2025 한국약학대학생 학술제(CoPharmForum)에 참석하여 학술 발표 및 강연 세션을 취재하고, 행사 전반을 기사로 정리·발행함.</p>
+
+                                <p class="text-sm md:text-base"><strong class="text-blue-600 block mb-1 text-lg">활동 내용</strong>
+                                수도권 약학대학 학술동아리 연합(PAMS)과 약대협이 공동 주최한 CoPharmForum에 참석하여, 희귀·난치질환 치료제, 디지털 약료, 약물 설계·전달, 약물 규제·안전성 등 4개 분야에서 본선에 진출한 8개 팀의 학술 발표를 청취했습니다. 교수진과 약학정보원장을 포함한 심사위원단의 평가 과정과 질의응답을 현장에서 지켜보며, 약대생 연구 역량의 수준을 직접 확인했습니다.<br>
+                                또한 변준호 숙명여대 교수의 바이오의약품 전달기술 강연, 김수경 부본부장의 의약품 안전성과 윤리를 주제로 한 강연 등 주요 세션을 정리하고, 학생 발표 내용과 수상자 인터뷰를 포함해 학술제 전반을 기사로 기록했습니다.</p>
+
+                                <p class="text-sm md:text-base"><strong class="text-blue-600 block mb-1 text-lg">성과 및 의의</strong>
+                                학술제를 통해 약대생 개개인의 연구 역량과 가능성은 매우 높다는 점을 확인했으나, 실제 행사에 참여하는 인원이 제한적이라는 한계 또한 분명히 느꼈습니다. 우수한 학술 성과가 소수의 참여자에게만 축적되는 구조로는 전체 약대생의 실력 향상으로 이어지기 어렵다고 판단했습니다.<br>
+                                이 경험을 계기로, 특정 행사 참여 여부와 관계없이 전체 약대생이 학습 역량을 체계적으로 강화할 수 있는 구조가 필요하다는 문제의식이 확고해졌고, 국가고시 핵심 과목을 중심으로 한 학습 자료 발간, 비대면 기반의 Micro Degree 등 보다 많은 학생이 참여할 수 있는 실력 중심 공약을 구상하게 되었습니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            'steering': {
+                title: '現 약대협 중앙운영위원',
+                content: `
+                    <div class="space-y-8">
+                        <div>
+                            <h4 class="font-bold text-xl text-navy mb-3">1. 병역 제도 관련 대외 정책 논의 참여</h4>
+                            
+                            <div class="space-y-4">
+                                <p class="text-sm md:text-base"><strong class="text-blue-600 block mb-1 text-lg">활동 배경</strong>
+                                이전에 강원대학교 약학대학 재학생을 대상으로 전문약제병 진로 강연을 기획·운영하며, 군 복무를 마친 약제병 선배로부터 실제 약무 업무 환경과 제도 운영에 대한 설명을 직접 접한 경험이 있습니다. 이를 통해 문서나 공지로는 드러나지 않는 제도 운영의 현실과, 약대생들이 병역 제도를 선택하는 과정에서 체감하는 정보 격차를 인식하게 되었습니다. 이러한 배경 속에서, 중앙운영위원으로서 병역 제도 논의가 이루어지는 자리에서 현장의 관점을 전달하고 실질적인 질의와 논의를 진행할 필요가 있다고 판단했습니다.</p>
+
+                                <p class="text-sm md:text-base"><strong class="text-blue-600 block mb-1 text-lg">활동 내용</strong>
+                                약대협 중앙운영위원으로서 국회의원 국방위원장실 비서관, 국방부 육군 행정사무관, 병무청 행정사무관이 참석한 병역 제도 관련 대면 논의에 참여했습니다. 정책국장이 준비한 발제자료를 사전에 검토하고 제 의견을 반영했으며, 현장에서는 주요 질의와 논의를 주도하며 전문약제병 모집 구조, 병역 유형별 제도 차이, 지원 시기와 자격 문제를 중심으로 질문과 의견을 제시했습니다. 특히 군필자로서 실제 복무 경험을 바탕으로, 제도 개선이 가능한 지점과 현실적으로 어려운 부분을 구분해 논의를 이끌었습니다.</p>
+
+                                <p class="text-sm md:text-base"><strong class="text-blue-600 block mb-1 text-lg">성과 및 의의</strong>
+                                전문약제병 증원 검토, 예방적 약무 업무 확대 가능성, 공보의·공보약 제도 논의의 행정적 관할 등 병역 제도 개선 논의의 현실적 범위를 명확히 확인했습니다. 이를 통해 약대생 병역 문제가 단순한 요구가 아니라, 구체적인 행정 구조와 책임 체계 속에서 다뤄져야 할 정책 과제임을 현장에서 공유할 수 있었습니다.<br>
+                                또한 회의 과정에서 제기된 질의와 답변이 일회성 논의로 소모되기보다는, 향후 유사한 문제 제기 시 참고할 수 있는 정리된 기록으로 남을 필요성을 체감했습니다. 이러한 경험은 이후 약대생 현안에 대해 의견을 수렴하고 정제해 축적하는 방식의 중요성을 인식하게 만든 계기가 되었으며, 개인적으로 정책 제안을 준비하는 태도와 문제 접근 방식에 분명한 기준을 남겼습니다.</p>
+                            </div>
+                            <img src="exp_steering_1.png" class="w-full md:w-3/5 h-auto rounded-lg my-4 shadow-sm mx-auto object-cover">
+                        </div>
+                    </div>
+                `
+            }
+        };
+
+        function openExpModal(key) {
+            const data = expData[key];
+            if (!data) return;
+            document.getElementById('exp-title').textContent = data.title;
+            document.getElementById('exp-content').innerHTML = data.content;
+            openModal('exp-modal');
+        }
+        function closeExpModal() { closeModal('exp-modal'); }
+
+        // General Modal Helper
+        function openModal(id) {
+            const modal = document.getElementById(id);
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                if(modal.querySelector('div')) {
+                    modal.querySelector('div').classList.remove('scale-95');
+                    modal.querySelector('div').classList.add('scale-100');
+                }
+            }, 10);
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal(id) {
+            const modal = document.getElementById(id);
+            modal.classList.add('opacity-0');
+            if(modal.querySelector('div')) {
+                modal.querySelector('div').classList.remove('scale-100');
+                modal.querySelector('div').classList.add('scale-95');
+            }
+            setTimeout(() => modal.classList.add('hidden'), 300);
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close on Escape
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                closePoster();
+                closePolicyModal();
+                closeExpModal();
+            }
+        });
+    </script>
+</body>
+</html>
