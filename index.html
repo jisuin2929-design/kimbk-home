@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- [수정] SNS 공유 시 profile_v2.png가 보이도록 설정 (파일명 변경) -->
+    <!-- SNS 공유 시 profile.png가 보이도록 설정 -->
     <meta property="og:title" content="기호 1번 김백건 | 대한약학대학학생협회 제36대 협회장 후보">
     <meta property="og:description" content="당당한 실력, 존중받는 내일! 기호 1번 김백건입니다.">
-    <!-- 캐시 갱신을 위해 파일명을 profile_v2.png로 변경했습니다 -->
     <meta property="og:image" content="https://kimbg.com/profile_v2.png">
     <meta property="og:url" content="https://kimbg.com/">
     
@@ -156,7 +155,6 @@
             <!-- Profile -->
             <div class="mb-6 mt-4 md:mt-0" data-aos="zoom-in" data-aos-delay="200">
                 <div class="w-60 h-60 md:w-80 md:h-80 rounded-full border-4 border-white/10 shadow-2xl mx-auto overflow-hidden bg-slate-800 flex items-center justify-center">
-                    <!-- [수정] profile_v2.png 사용 -->
                     <img src="profile_v2.png" alt="기호 1번 김백건" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentNode.innerHTML='<i class=\'w-24 h-24 text-slate-600\' data-lucide=\'user\'></i>'">
                 </div>
                 <div class="mt-6 px-5 py-2 rounded-full bg-white/10 backdrop-blur-sm inline-block border border-white/5">
@@ -258,7 +256,6 @@
                 <div class="mt-8 pt-6 border-t border-slate-200 flex items-center justify-end gap-3">
                     <span class="font-bold text-navy text-lg">기호 1번 김백건</span>
                     <div class="w-10 h-10 rounded-full bg-slate-200 overflow-hidden">
-                        <!-- [수정] 하단 프로필도 profile_v2.png로 변경 -->
                         <img src="profile_v2.png" class="w-full h-full object-cover">
                     </div>
                 </div>
@@ -272,7 +269,8 @@
             <div class="text-center mb-10" data-aos="fade-up">
                 <span class="text-blue-600 font-bold text-xs tracking-widest uppercase">Overview</span>
                 <h2 class="text-2xl md:text-4xl font-bold text-navy mt-1">2. Project Roadmap</h2>
-                <p class="text-slate-500 mt-3 text-sm md:text-base">김백건이 그리는 약대생 사회의 전체 구조입니다.</p>
+                <!-- [수정] 로드맵 문구 변경 -->
+                <p class="text-slate-500 mt-3 text-sm md:text-base">전국 37개 약학대학 회장님들과 함께 완성해갈, 가장 현실적이고 든든한 약속입니다.</p>
             </div>
             
             <div class="flex justify-center" data-aos="zoom-in">
@@ -288,7 +286,8 @@
         <div class="max-w-6xl mx-auto px-4">
             <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-4xl font-black text-navy">3. CORE PROJECT</h2>
-                <p class="text-xl text-slate-500 mt-4">협회의 기본 역할을 다시 정리합니다</p>
+                <!-- [수정] CORE 문구 변경 -->
+                <p class="text-xl text-slate-500 mt-4">선택과 집중, 임기 내 반드시 실현하여 결과로 증명할 최우선 과제입니다</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
@@ -412,6 +411,7 @@
                     <ul class="list-disc pl-5 space-y-2 marker:text-pink-300 text-slate-200 font-medium text-sm mb-4">
                         <li><span class="text-yellow-300">KPSA 유튜브 활성화 & 앰배서더 모집</span></li>
                         <li>하나되는 약대협</li>
+                        <!-- [수정] 공약 추가 -->
                         <li>지역 경계 없는 약대협</li>
                     </ul>
                     <button class="text-sm font-bold text-slate-400 flex items-center gap-1 hover:text-white mt-auto">
@@ -644,6 +644,7 @@
 
     <!-- Experience Detail Modal (Detailed Activities) -->
     <div id="exp-modal" class="fixed inset-0 z-[110] bg-black/50 hidden flex items-center justify-center p-4 backdrop-blur-sm transition-opacity duration-300 opacity-0" onclick="closeExpModal()">
+        <!-- [수정] max-w-3xl 유지, overflow-y-auto는 팝업 컨텐츠 스크롤을 위해 필수 -->
         <div class="bg-white w-full max-w-3xl rounded-2xl shadow-2xl overflow-hidden transform transition-all scale-95 max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
             <div class="bg-navy p-6 text-white relative sticky top-0 z-20">
                 <h3 id="exp-title" class="text-2xl font-bold">Activity Title</h3>
@@ -1143,6 +1144,12 @@
                 if(modal.querySelector('div')) {
                     modal.querySelector('div').classList.remove('scale-95');
                     modal.querySelector('div').classList.add('scale-100');
+                    
+                    // [수정] 모달이 열릴 때 내부 스크롤을 최상단으로 강제 초기화
+                    const scrollableContent = modal.querySelector('.overflow-y-auto');
+                    if (scrollableContent) {
+                        scrollableContent.scrollTop = 0;
+                    }
                 }
             }, 10);
             document.body.style.overflow = 'hidden';
