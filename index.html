@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SNS 공유 시 profile.png가 보이도록 설정 (전체 주소 적용) -->
+    <!-- [수정] SNS 공유 시 profile_v2.png가 보이도록 설정 (파일명 변경) -->
     <meta property="og:title" content="기호 1번 김백건 | 대한약학대학학생협회 제36대 협회장 후보">
     <meta property="og:description" content="당당한 실력, 존중받는 내일! 기호 1번 김백건입니다.">
-    <meta property="og:image" content="https://kimbg.com/profile.png">
+    <!-- 캐시 갱신을 위해 파일명을 profile_v2.png로 변경했습니다 -->
+    <meta property="og:image" content="https://kimbg.com/profile_v2.png">
     <meta property="og:url" content="https://kimbg.com/">
     
     <title>기호 1번 김백건 | 대한약학대학학생협회 제36대 협회장 후보</title>
@@ -39,7 +40,7 @@
             background: linear-gradient(to bottom, #dbeafe 0%, #0f172a 20%, #0f172a 80%, #dbeafe 100%);
         }
         
-        /* Background Letters for CORE - Centered & Larger */
+        /* Background Letters for CORE */
         .bg-letter {
             position: absolute;
             top: 50%;
@@ -70,7 +71,7 @@
             overflow: hidden;
             position: relative;
             touch-action: pan-y;
-            user-select: none; /* 드래그 시 텍스트 선택 방지 */
+            user-select: none;
         }
         .slider-track {
             display: flex;
@@ -155,7 +156,8 @@
             <!-- Profile -->
             <div class="mb-6 mt-4 md:mt-0" data-aos="zoom-in" data-aos-delay="200">
                 <div class="w-60 h-60 md:w-80 md:h-80 rounded-full border-4 border-white/10 shadow-2xl mx-auto overflow-hidden bg-slate-800 flex items-center justify-center">
-                    <img src="profile.png" alt="기호 1번 김백건" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentNode.innerHTML='<i class=\'w-24 h-24 text-slate-600\' data-lucide=\'user\'></i>'">
+                    <!-- [수정] profile_v2.png 사용 -->
+                    <img src="profile_v2.png" alt="기호 1번 김백건" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentNode.innerHTML='<i class=\'w-24 h-24 text-slate-600\' data-lucide=\'user\'></i>'">
                 </div>
                 <div class="mt-6 px-5 py-2 rounded-full bg-white/10 backdrop-blur-sm inline-block border border-white/5">
                     <p class="text-blue-200 font-bold text-sm md:text-base">✨ 당당한 실력, 존중받는 내일! 기호 1번 김백건입니다.</p>
@@ -256,7 +258,8 @@
                 <div class="mt-8 pt-6 border-t border-slate-200 flex items-center justify-end gap-3">
                     <span class="font-bold text-navy text-lg">기호 1번 김백건</span>
                     <div class="w-10 h-10 rounded-full bg-slate-200 overflow-hidden">
-                        <img src="profile.png" class="w-full h-full object-cover">
+                        <!-- [수정] 하단 프로필도 profile_v2.png로 변경 -->
+                        <img src="profile_v2.png" class="w-full h-full object-cover">
                     </div>
                 </div>
             </div>
