@@ -301,9 +301,10 @@
     <!-- 3. CORE PROJECT -->
     <section id="core" class="py-20 md:py-28 bg-white relative">
         <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-16" data-aos="fade-up">
+            <div class="text-center mb-10" data-aos="fade-up">
                 <h2 class="text-4xl font-black text-navy">3. CORE PROJECT</h2>
                 <p class="text-xl text-slate-500 mt-4">선택과 집중, 임기 내 반드시 실현하여 결과로 증명할 최우선 과제입니다</p>
+                <p class="text-sm text-gray-400 mt-2">※ 각 공약명을 클릭하면 세부사항을 볼 수 있습니다.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
@@ -347,7 +348,7 @@
                             </li>
                             <li class="policy-item" onclick="openPolicyModal('package')">
                                 <i data-lucide="chevron-right" class="w-4 h-4 inline-block mr-1 text-blue-500"></i>
-                                KPSA 직무현장체험 패키지
+                                KPSA 직무현장체험 패키지 제공
                             </li>
                             <li class="policy-item" onclick="openPolicyModal('contest')">
                                 <i data-lucide="chevron-right" class="w-4 h-4 inline-block mr-1 text-blue-500"></i>
@@ -423,9 +424,10 @@
         <div class="absolute top-0 right-0 w-64 h-64 bg-blue-500 rounded-full blur-3xl opacity-20 transform translate-x-1/2 -translate-y-1/2"></div>
         
         <div class="max-w-6xl mx-auto px-4 relative z-10">
-            <div class="text-center mb-16" data-aos="fade-up">
+            <div class="text-center mb-10" data-aos="fade-up">
                 <h2 class="text-4xl font-black">4. BEYOND PROJECT</h2>
                 <p class="text-xl text-slate-300 mt-4">지금을 넘어 다음을 준비합니다</p>
+                <p class="text-sm text-slate-400 mt-2">※ 각 공약명을 클릭하면 세부사항을 볼 수 있습니다.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
@@ -668,13 +670,13 @@
         </div>
     </div>
 
-    <!-- Policy Detail Modal -->
+    <!-- Policy Detail Modal (Dynamic Content) -->
     <div id="policy-modal" class="fixed inset-0 z-[110] bg-black/50 hidden flex items-center justify-center p-4 backdrop-blur-sm transition-opacity duration-300 opacity-0" onclick="closePolicyModal()">
         <div class="bg-white w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden transform transition-all scale-95 max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
             <div class="bg-navy p-6 text-white relative sticky top-0 z-20">
                 <span id="policy-tag" class="inline-block px-2 py-1 bg-white/20 rounded text-xs font-bold mb-2">Category</span>
                 <h3 id="policy-title" class="text-2xl font-bold">Policy Title</h3>
-                <p id="policy-subtitle" class="text-blue-200 text-sm mt-1">Subtitle</p>
+                <!-- Subtitle removed as requested to use dynamic content -->
                 <button onclick="closePolicyModal()" class="absolute top-4 right-4 text-white/70 hover:text-white">
                     <i data-lucide="x" class="w-6 h-6"></i>
                 </button>
@@ -803,7 +805,7 @@
             document.body.style.overflow = 'auto';
         }
 
-        // 16 Detailed Policy Data
+        // 16 Detailed Policy Data (Correctly Mapped from Document)
         const policyData = {
             'toolkit': {
                 title: 'Pharm Study Toolkit 제작',
@@ -879,10 +881,10 @@
                         <div>
                             <strong class="text-blue-800 text-lg block mb-2">방법론</strong>
                             <ul class="list-disc pl-5 space-y-1">
-                                <li><strong>① 팀 선발 (프로그램 종료 직후):</strong> 최종 발표 결과를 바탕으로 사업화 가능성이 있는 소수 팀을 선발하겠습니다. 기술성·시장성·팀 구성·지속 가능성 기준으로 평가하겠습니다.</li>
-                                <li><strong>② 전담 멘토 매칭:</strong> 창업 경험자, 투자 경험자(VC), 산업 실무자를 팀별 전담 멘토로 배정하겠습니다. 월 1회 이상 정기 멘토링 진행하겠습니다. (사업 모델·BM 고도화 중심)</li>
-                                <li><strong>③ 실전 단계 지원:</strong> 창업지원사업, 예비창업패키지, 민관 지원사업 리스트업 및 맞춤 연계하겠습니다. 사업계획서·피치덱 작성 방향성 코칭을 지원하겠습니다.</li>
-                                <li><strong>④ 재원 운영 방식:</strong> 협회비가 아닌 외부 후원 및 연계 재원 중심으로 운영하겠습니다.</li>
+                                <li><strong>팀 선발 (프로그램 종료 직후):</strong> 최종 발표 결과를 바탕으로 사업화 가능성이 있는 소수 팀을 선발하겠습니다. 기술성·시장성·팀 구성·지속 가능성 기준으로 평가하겠습니다.</li>
+                                <li><strong>전담 멘토 매칭:</strong> 창업 경험자, 투자 경험자(VC), 산업 실무자를 팀별 전담 멘토로 배정하겠습니다. 월 1회 이상 정기 멘토링 진행하겠습니다. (사업 모델·BM 고도화 중심)</li>
+                                <li><strong>실전 단계 지원:</strong> 창업지원사업, 예비창업패키지, 민관 지원사업 리스트업 및 맞춤 연계하겠습니다. 사업계획서·피치덱 작성 방향성 코칭을 지원하겠습니다.</li>
+                                <li><strong>재원 운영 방식:</strong> 협회비가 아닌 외부 후원 및 연계 재원 중심으로 운영하겠습니다.</li>
                             </ul>
                             <p class="mt-2 text-sm text-gray-500">시행 주체 : 창업기획단 / 시행 시기 : 4월~1월</p>
                         </div>
@@ -890,12 +892,12 @@
                 `
             },
             'package': {
-                title: 'KPSA 직무현장체험 패키지',
+                title: 'KPSA 직무현장체험 패키지 제공',
                 content: `
                     <div class="space-y-4">
                         <div>
                             <strong class="text-blue-800 text-lg block mb-2">주요 내용</strong>
-                            <p>약대생에게 보다 깊고 넓은 진로체험 기회를 제공하기 위해, ① 기업 연계 인턴십, ② 제약회사 채용설명회, ③ 현직자 밀착형 직무 V-log 제작의 세 가지 축으로 구성된 KPSA 직무현장체험 패키지를 운영하겠습니다.</p>
+                            <p>약대생에게 보다 깊고 넓은 진로체험 기회를 제공하기 위해, ▲ 기업 연계 인턴십, ▲ 제약회사 채용설명회, ▲ 현직자 밀착형 직무 V-log 제작의 세 가지 축으로 구성된 KPSA 직무현장체험 패키지를 운영하겠습니다.</p>
                         </div>
                         <div>
                             <strong class="text-blue-800 text-lg block mb-2">필요성</strong>
@@ -904,9 +906,9 @@
                         <div>
                             <strong class="text-blue-800 text-lg block mb-2">방법론</strong>
                             <ul class="list-disc pl-5 space-y-1">
-                                <li><strong>① 기업 연계 인턴십:</strong> 기존 마케팅 중심 인턴십에서 벗어나 RA·QC/QA 등 다양한 직무로 확대하겠습니다. 방학 중 운영을 원칙으로 하여, 기업과의 연계를 통해 순차적으로 실시하겠습니다.</li>
-                                <li><strong>② 제약회사 채용설명회:</strong> 제약회사 인사·홍보 담당자를 초빙하여 다직능 채용설명회를 개최하겠습니다. 실제 채용 과정과 직무 이해를 중심으로 질의응답 위주로 운영하겠습니다.</li>
-                                <li><strong>③ 현직자 밀착형 직무 V-log:</strong> 현직자의 하루 업무를 중심으로 한 직무 체험형 영상을 제작하겠습니다. 인턴십·설명회 참여가 어려운 학생도 온라인으로 경험할 수 있도록 상시 아카이빙하겠습니다.</li>
+                                <li><strong>기업 연계 인턴십:</strong> 기존 마케팅 중심 인턴십에서 벗어나 RA·QC/QA 등 다양한 직무로 확대하겠습니다. 방학 중 운영을 원칙으로 하여, 기업과의 연계를 통해 순차적으로 실시하겠습니다.</li>
+                                <li><strong>제약회사 채용설명회:</strong> 제약회사 인사·홍보 담당자를 초빙하여 다직능 채용설명회를 개최하겠습니다. 실제 채용 과정과 직무 이해를 중심으로 질의응답 위주로 운영하겠습니다.</li>
+                                <li><strong>현직자 밀착형 직무 V-log:</strong> 현직자의 하루 업무를 중심으로 한 직무 체험형 영상을 제작하겠습니다. 인턴십·설명회 참여가 어려운 학생도 온라인으로 경험할 수 있도록 상시 아카이빙하겠습니다.</li>
                             </ul>
                             <p class="mt-2 text-sm text-gray-500">시행 주체 : 전략실(인턴십), 문화국(설명회), 정보통신국(V-log) / 시행 시기 : 방학 중 및 연중 상시</p>
                         </div>
@@ -952,7 +954,9 @@
                         </div>
                         <div>
                             <strong class="text-blue-800 text-lg block mb-2">방법론</strong>
-                            <p>임상·공직·제약·연구로 대표되는 BIG4 진로를 중심으로, 약무행정·VC·법조계 등 특별편을 포함해 약대생이 실제로 선택할 수 있는 다양한 경로를 제시하겠습니다.</p>
+                            <ul class="list-disc pl-5 space-y-1">
+                                <li>임상·공직·제약·연구로 대표되는 BIG4 진로를 중심으로, 약무행정·VC·법조계 등 특별편을 포함해 약대생이 실제로 선택할 수 있는 다양한 경로를 제시하겠습니다.</li>
+                            </ul>
                             <p class="mt-2 text-sm text-gray-500">시행 주체 : 정보통신국 / 시행 시기 : 한달에 1-2명 씩 인터뷰 진행</p>
                         </div>
                     </div>
@@ -1221,7 +1225,6 @@
                 title: '前 강원대학교 제37대 약학대학 학생회장',
                 content: `
                     <div class="space-y-8">
-                        <!-- 1. 청춘약속 -->
                         <div>
                             <h4 class="font-bold text-xl text-navy mb-3">1. 제1회 청춘藥속 개최</h4>
                             <img src="exp1_1.png" class="w-full md:w-3/5 h-auto rounded-lg my-4 shadow-sm mx-auto object-cover" alt="청춘약속 메인 이미지">
@@ -1256,7 +1259,6 @@
                             <h4 class="font-bold text-xl text-navy mb-3">2. 북플리마켓 아카이빙 체계 구축</h4>
                             <img src="exp2_1.png" class="w-full md:w-3/5 h-auto rounded-lg my-4 shadow-sm mx-auto object-cover">
                             
-                            <!-- Side by side -->
                             <div class="grid grid-cols-2 gap-2 my-4 md:w-3/5 md:mx-auto">
                                 <img src="exp2_2.png" class="w-full h-auto rounded shadow-sm object-cover">
                                 <img src="exp2_3.png" class="w-full h-auto rounded shadow-sm object-cover">
