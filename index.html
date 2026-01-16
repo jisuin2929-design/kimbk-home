@@ -304,7 +304,6 @@
             <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-4xl font-black text-navy">3. CORE PROJECT</h2>
                 <p class="text-xl text-slate-500 mt-4">선택과 집중, 임기 내 반드시 실현하여 결과로 증명할 최우선 과제입니다</p>
-                <!-- 수정된 부분: 색상을 indigo-600으로 변경하고 굵게(font-bold) 처리 -->
                 <p class="text-indigo-600 font-bold text-sm mt-4 animate-pulse">
                     👆 각 공약명을 클릭하면 세부사항을 볼 수 있습니다.
                 </p>
@@ -430,7 +429,6 @@
             <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-4xl font-black">4. BEYOND PROJECT</h2>
                 <p class="text-xl text-slate-300 mt-4">지금을 넘어 다음을 준비합니다</p>
-                <!-- 수정된 부분: 어두운 배경에 잘 보이는 yellow-300으로 변경하고 굵게 처리 -->
                 <p class="text-yellow-300 font-bold text-sm mt-4 animate-pulse">
                     👆 각 공약명을 클릭하면 세부사항을 볼 수 있습니다.
                 </p>
@@ -611,11 +609,12 @@
     <section class="py-16 bg-slate-50 border-t border-slate-200">
         <div class="max-w-4xl mx-auto px-4 text-center">
             <h2 class="text-xl md:text-2xl font-bold text-navy mb-6">More Details</h2>
-            <div class="flex flex-col sm:flex-row justify-center gap-3">
-                <a href="policy_proposal.pdf" download class="flex items-center justify-center gap-2 px-6 py-3 bg-white border border-slate-200 rounded-xl shadow-sm hover:shadow-md transition text-slate-700 font-bold text-sm whitespace-nowrap">
+            <div class="flex justify-center items-center gap-2">
+                <button onclick="downloadPolicy()" class="flex items-center justify-center gap-2 px-6 py-3 bg-white border border-slate-200 rounded-xl shadow-sm hover:shadow-md transition text-slate-700 font-bold text-sm whitespace-nowrap">
                     <i data-lucide="file-text" class="w-4 h-4 text-red-500"></i>
                     정책자료집 다운로드
-                </a>
+                </button>
+                <span class="text-xs text-slate-400 font-medium">01.18~</span>
             </div>
         </div>
     </section>
@@ -676,6 +675,20 @@
         </div>
     </div>
 
+    <!-- Alert Modal (New) -->
+    <div id="alert-modal" class="fixed inset-0 z-[120] bg-black/50 hidden flex items-center justify-center p-4 backdrop-blur-sm transition-opacity duration-300 opacity-0" onclick="closeAlert()">
+        <div class="bg-white rounded-xl shadow-2xl p-6 max-w-sm w-full text-center transform scale-95 transition-transform duration-300" onclick="event.stopPropagation()">
+            <div class="mb-4">
+                <div class="mx-auto w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-2">
+                    <i data-lucide="info" class="w-6 h-6 text-blue-600"></i>
+                </div>
+                <h3 class="text-lg font-bold text-navy">알림</h3>
+                <p class="text-slate-600 mt-2 text-sm leading-relaxed">정책자료집은 1월 18일부터<br>다운로드 가능합니다! 조금만 기다려주세요. 😊</p>
+            </div>
+            <button onclick="closeAlert()" class="w-full py-2 bg-navy text-white rounded-lg font-bold hover:bg-slate-800 transition">확인</button>
+        </div>
+    </div>
+
     <!-- Policy Detail Modal -->
     <div id="policy-modal" class="fixed inset-0 z-[110] bg-black/50 hidden flex items-center justify-center p-4 backdrop-blur-sm transition-opacity duration-300 opacity-0" onclick="closePolicyModal()">
         <div class="bg-white w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden transform transition-all scale-95 max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
@@ -718,6 +731,16 @@
     <script>
         lucide.createIcons();
         AOS.init({ once: true, offset: 80, duration: 800 });
+
+        // Policy Download Alert Logic
+        function downloadPolicy() {
+            // alert() 대신 커스텀 모달 사용
+            openModal('alert-modal');
+        }
+
+        function closeAlert() {
+            closeModal('alert-modal');
+        }
 
         // Mobile Menu Toggle
         function toggleMobileMenu() {
