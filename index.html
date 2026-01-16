@@ -424,7 +424,7 @@
         <div class="absolute top-0 right-0 w-64 h-64 bg-blue-500 rounded-full blur-3xl opacity-20 transform translate-x-1/2 -translate-y-1/2"></div>
         
         <div class="max-w-6xl mx-auto px-4 relative z-10">
-            <div class="text-center mb-10" data-aos="fade-up">
+            <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-4xl font-black">4. BEYOND PROJECT</h2>
                 <p class="text-xl text-slate-300 mt-4">지금을 넘어 다음을 준비합니다</p>
                 <p class="text-sm text-slate-400 mt-2">※ 각 공약명을 클릭하면 세부사항을 볼 수 있습니다.</p>
@@ -432,7 +432,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                 <!-- Global Insight -->
-                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-3xl border border-white/10 hover:bg-white/20 transition" data-aos="flip-up">
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-3xl border border-white/10 hover:bg-white/20 transition cursor-pointer" onclick="openPolicyModal('global')" data-aos="flip-up">
                     <i data-lucide="globe" class="w-10 h-10 text-blue-300 mb-5"></i>
                     <h3 class="text-2xl font-bold mb-1">Global Insight</h3>
                     <p class="text-blue-200 font-medium mb-3">글로벌 역량을 갖춘 약대생으로</p>
@@ -449,7 +449,7 @@
                 </div>
 
                 <!-- Community & Culture -->
-                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-3xl border border-white/10 hover:bg-white/20 transition" data-aos="flip-up" data-aos-delay="200">
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-3xl border border-white/10 hover:bg-white/20 transition cursor-pointer" onclick="openPolicyModal('community')" data-aos="flip-up" data-aos-delay="200">
                     <i data-lucide="users" class="w-10 h-10 text-pink-300 mb-5"></i>
                     <h3 class="text-2xl font-bold mb-1">Community & Culture</h3>
                     <p class="text-pink-200 font-medium mb-3">하나되는 약대생, 즐거운 연대로</p>
@@ -861,7 +861,14 @@
                                 <li>마이크로디그리 과정 마지막 날 성과(과제 해결 결과 등)를 공유하고 우수팀을 시상하는 일정을 둠으로써, 참여자들의 성취감 고취와 학습동기를 유발하겠습니다.</li>
                                 <li>교육 코스를 정상적으로 수료한 인원에 한하여 교육인증서를 발급하겠습니다.</li>
                             </ul>
-                            <p class="mt-2 text-sm text-gray-500">시행 주체 : 약대협 전략실 및 대외협력국, 교육국 / 시행 시기 : 여름방학 중 1차</p>
+                            <div class="mt-4 p-4 bg-gray-50 rounded-lg text-sm">
+                                <p class="mb-1"><span class="font-bold text-navy">시행 주체 :</span></p>
+                                <ul class="list-disc pl-5 mb-2">
+                                    <li>약대협 전략실 및 대외협력국: 전문가 초빙 루트 확보(대한약사회, 교육 프로그램 운영 기관 등 유관기관 컨택)</li>
+                                    <li>약대협 교육국 : 주제 구체화, 참여학생 모집, 마이크로디그리 진행과정 전반 관리, 수료증 제작</li>
+                                </ul>
+                                <p><span class="font-bold text-navy">시행 시기 :</span> 여름방학 중 1차</p>
+                            </div>
                         </div>
                     </div>
                 `
@@ -881,10 +888,10 @@
                         <div>
                             <strong class="text-blue-800 text-lg block mb-2">방법론</strong>
                             <ul class="list-disc pl-5 space-y-1">
-                                <li><strong>팀 선발 (프로그램 종료 직후):</strong> 최종 발표 결과를 바탕으로 사업화 가능성이 있는 소수 팀을 선발하겠습니다. 기술성·시장성·팀 구성·지속 가능성 기준으로 평가하겠습니다.</li>
-                                <li><strong>전담 멘토 매칭:</strong> 창업 경험자, 투자 경험자(VC), 산업 실무자를 팀별 전담 멘토로 배정하겠습니다. 월 1회 이상 정기 멘토링 진행하겠습니다. (사업 모델·BM 고도화 중심)</li>
-                                <li><strong>실전 단계 지원:</strong> 창업지원사업, 예비창업패키지, 민관 지원사업 리스트업 및 맞춤 연계하겠습니다. 사업계획서·피치덱 작성 방향성 코칭을 지원하겠습니다.</li>
-                                <li><strong>재원 운영 방식:</strong> 협회비가 아닌 외부 후원 및 연계 재원 중심으로 운영하겠습니다.</li>
+                                <li><strong>① 팀 선발 (프로그램 종료 직후):</strong> 최종 발표 결과를 바탕으로 사업화 가능성이 있는 소수 팀을 선발하겠습니다. 기술성·시장성·팀 구성·지속 가능성 기준으로 평가하겠습니다.</li>
+                                <li><strong>② 전담 멘토 매칭:</strong> 창업 경험자, 투자 경험자(VC), 산업 실무자를 팀별 전담 멘토로 배정하겠습니다. 월 1회 이상 정기 멘토링 진행하겠습니다. (사업 모델·BM 고도화 중심)</li>
+                                <li><strong>③ 실전 단계 지원:</strong> 창업지원사업, 예비창업패키지, 민관 지원사업 리스트업 및 맞춤 연계하겠습니다. 사업계획서·피치덱 작성 방향성 코칭을 지원하겠습니다.</li>
+                                <li><strong>④ 재원 운영 방식:</strong> 협회비가 아닌 외부 후원 및 연계 재원 중심으로 운영하겠습니다.</li>
                             </ul>
                             <p class="mt-2 text-sm text-gray-500">시행 주체 : 창업기획단 / 시행 시기 : 4월~1월</p>
                         </div>
@@ -897,7 +904,7 @@
                     <div class="space-y-4">
                         <div>
                             <strong class="text-blue-800 text-lg block mb-2">주요 내용</strong>
-                            <p>약대생에게 보다 깊고 넓은 진로체험 기회를 제공하기 위해, ▲ 기업 연계 인턴십, ▲ 제약회사 채용설명회, ▲ 현직자 밀착형 직무 V-log 제작의 세 가지 축으로 구성된 KPSA 직무현장체험 패키지를 운영하겠습니다.</p>
+                            <p>약대생에게 보다 깊고 넓은 진로체험 기회를 제공하기 위해, ① 기업 연계 인턴십, ② 제약회사 채용설명회, ③ 현직자 밀착형 직무 V-log 제작의 세 가지 축으로 구성된 KPSA 직무현장체험 패키지를 운영하겠습니다.</p>
                         </div>
                         <div>
                             <strong class="text-blue-800 text-lg block mb-2">필요성</strong>
@@ -906,11 +913,24 @@
                         <div>
                             <strong class="text-blue-800 text-lg block mb-2">방법론</strong>
                             <ul class="list-disc pl-5 space-y-1">
-                                <li><strong>기업 연계 인턴십:</strong> 기존 마케팅 중심 인턴십에서 벗어나 RA·QC/QA 등 다양한 직무로 확대하겠습니다. 방학 중 운영을 원칙으로 하여, 기업과의 연계를 통해 순차적으로 실시하겠습니다.</li>
-                                <li><strong>제약회사 채용설명회:</strong> 제약회사 인사·홍보 담당자를 초빙하여 다직능 채용설명회를 개최하겠습니다. 실제 채용 과정과 직무 이해를 중심으로 질의응답 위주로 운영하겠습니다.</li>
-                                <li><strong>현직자 밀착형 직무 V-log:</strong> 현직자의 하루 업무를 중심으로 한 직무 체험형 영상을 제작하겠습니다. 인턴십·설명회 참여가 어려운 학생도 온라인으로 경험할 수 있도록 상시 아카이빙하겠습니다.</li>
+                                <li><strong>① 기업 연계 인턴십:</strong> 기존 마케팅 중심 인턴십에서 벗어나 RA·QC/QA 등 다양한 직무로 확대하겠습니다. 방학 중 운영을 원칙으로 하여, 기업과의 연계를 통해 순차적으로 실시하겠습니다.</li>
+                                <li><strong>② 제약회사 채용설명회:</strong> 제약회사 인사·홍보 담당자를 초빙하여 다직능 채용설명회를 개최하겠습니다. 실제 채용 과정과 직무 이해를 중심으로 질의응답 위주로 운영하겠습니다.</li>
+                                <li><strong>③ 현직자 밀착형 직무 V-log:</strong> 현직자의 하루 업무를 중심으로 한 직무 체험형 영상을 제작하겠습니다. 인턴십·설명회 참여가 어려운 학생도 온라인으로 경험할 수 있도록 상시 아카이빙하겠습니다.</li>
                             </ul>
-                            <p class="mt-2 text-sm text-gray-500">시행 주체 : 전략실(인턴십), 문화국(설명회), 정보통신국(V-log) / 시행 시기 : 방학 중 및 연중 상시</p>
+                            <div class="mt-4 p-4 bg-gray-50 rounded-lg text-sm">
+                                <p class="mb-1"><span class="font-bold text-navy">시행 주체 :</span></p>
+                                <ul class="list-disc pl-5 mb-2">
+                                    <li>인턴십: 전략실</li>
+                                    <li>채용설명회: 문화국</li>
+                                    <li>직무 V-log: 정보통신국</li>
+                                </ul>
+                                <p class="mb-1"><span class="font-bold text-navy">시행 시기 :</span></p>
+                                <ul class="list-disc pl-5">
+                                    <li>인턴십: 방학 중 실시</li>
+                                    <li>채용설명회: 여름 방학 중</li>
+                                    <li>직무 V-log: 연중 상시 모집·제작</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 `
@@ -954,9 +974,7 @@
                         </div>
                         <div>
                             <strong class="text-blue-800 text-lg block mb-2">방법론</strong>
-                            <ul class="list-disc pl-5 space-y-1">
-                                <li>임상·공직·제약·연구로 대표되는 BIG4 진로를 중심으로, 약무행정·VC·법조계 등 특별편을 포함해 약대생이 실제로 선택할 수 있는 다양한 경로를 제시하겠습니다.</li>
-                            </ul>
+                            <p>임상·공직·제약·연구로 대표되는 BIG4 진로를 중심으로, 약무행정·VC·법조계 등 특별편을 포함해 약대생이 실제로 선택할 수 있는 다양한 경로를 제시하겠습니다.</p>
                             <p class="mt-2 text-sm text-gray-500">시행 주체 : 정보통신국 / 시행 시기 : 한달에 1-2명 씩 인터뷰 진행</p>
                         </div>
                     </div>
@@ -977,7 +995,7 @@
                         <div>
                             <strong class="text-blue-800 text-lg block mb-2">방법론</strong>
                             <p>[표준 업무 가이드라인 정립] (약사: 심층 상담 / 학생: 잔약 카운팅 및 기록) → [지역 기반 클러스터 매칭] (각 약학대학 ↔ 해당 지역 분회 우선 연결) → [사전 필수 교육] (공단 프로세스 및 보안 교육 이수) → [현장 파견 및 활동 인정]</p>
-                            <p class="mt-2 text-sm text-gray-500">시행 주체 : 약대협 TF국 (중앙 컨트롤타워) 및 지역 약사회 / 시행 시기 : 당선 직후 협의 → 6월 수요 조사 및 매칭 → 여름방학 시범 사업</p>
+                            <p class="mt-2 text-sm text-gray-500">시행 주체 : 약대협 TF국 (중앙 컨트롤타워) 및 지역 약사회 / 시행 시기 : 당선 직후 대한약사회(지역사회환자안전약물관리본부) 및 공단 협의 → 6월 전국 지부별 수요 조사 및 매칭 → 여름방학 전국 동시 시범 사업 운영</p>
                         </div>
                     </div>
                 `
@@ -988,16 +1006,16 @@
                     <div class="space-y-4">
                         <div>
                             <strong class="text-blue-800 text-lg block mb-2">주요 내용</strong>
-                            <p>독거노인 지원 전문 유관 단체(희망나눔협의회 등)와 협력하여 의료 사각지대에 놓인 어르신 가정을 직접 방문합니다. 단순히 말벗이 되어드리는 봉사를 넘어, 어르신들의 실제 약물 복용 습관을 모니터링하고 가정 내 방치된 폐의약품을 수거하여 안전한 약물 사용 환경을 조성합니다. 더불어 습기나 직사광선 등 의약품 보관 상태를 점검하고 식습관, 수면 패턴과 같은 전반적인 생활 건강을 관리하는 멘토링을 수행합니다.</p>
+                            <p>독거노인 지원 전문 유관 단체(희망나눔협의회 등)와 협력하여 의료 사각지대에 놓인 어르신 가정을 직접 방문합니다. 단순히 말벗이 되어드리는 봉사를 넘어, 어르신들의 실제 약물 복용 습관을 모니터링하고 가정 내 방치된 폐의약품을 수거하여 안전한 약물 사용 환경을 조성합니다. 더불어 습기나 직사광선 등 의약품 보관 상태를 점검하고 식습관, 수면 패턴과 같은 전반적인 생활 건강을 관리하는 멘토링을 수행합니다. 이를 통해 어르신과 깊은 유대감을 형성하고, 약료와 정서적 지지를 아우르는 통합적인 돌봄 활동을 전개하겠습니다.</p>
                         </div>
                         <div>
                             <strong class="text-blue-800 text-lg block mb-2">필요성</strong>
-                            <p>현행법상 약국 내로 국한된 업무 범위를 넘어, 합법적으로 허용된 '찾아가는 서비스'를 경험하며 미래 약사의 활동 반경을 선제적으로 확장해야 합니다. 교과서가 아닌 실제 생활 현장에서 환자를 마주함으로써, 복약 순응도가 낮아지는 근본적인 원인을 파악하고 해결책을 제시하는 실전 역량을 기를 수 있습니다. 무엇보다 개별적으로 봉사 대상을 찾는 막막함과 안전에 대한 우려를 해소하기 위해, 약대협이 보유한 검증된 네트워크를 활용합니다.</p>
+                            <p>현행법상 약국 내로 국한된 업무 범위를 넘어, 합법적으로 허용된 '찾아가는 서비스'를 경험하며 미래 약사의 활동 반경을 선제적으로 확장해야 합니다. 교과서가 아닌 실제 생활 현장에서 환자를 마주함으로써, 복약 순응도가 낮아지는 근본적인 원인을 파악하고 해결책을 제시하는 실전 역량을 기를 수 있습니다. 무엇보다 개별적으로 봉사 대상을 찾는 막막함과 안전에 대한 우려를 해소하기 위해, 약대협이 보유한 검증된 네트워크를 활용합니다. 이를 통해 학생들에게는 가장 안전하고 체계적인 현장 경험을 제공하고, 예비 보건의료인으로서 소외된 이웃을 돌보는 사회적 책무를 실현하겠습니다.</p>
                         </div>
                         <div>
                             <strong class="text-blue-800 text-lg block mb-2">방법론</strong>
-                            <p>[표준 업무 가이드라인 정립] → [수도권 집중 타겟팅] → [사전 필수 교육] → [현장 파견 및 활동 인정]</p>
-                            <p class="mt-2 text-sm text-gray-500">시행 주체 : 약대협 TF국 및 수도권 약학대학 학생 / 시행 시기 : 당선 직후 협의 → 6월 모집 → 여름방학 시범 사업</p>
+                            <p>[표준 업무 가이드라인 정립] (약사: 심층 상담 / 학생: 잔약 카운팅 및 기록) → [수도권 집중 타겟팅] (주거 밀집 지역 분회 및 인근 약대 매칭) → [사전 필수 교육] (공단 프로세스 및 보안 교육 이수) → [현장 파견 및 활동 인정]</p>
+                            <p class="mt-2 text-sm text-gray-500">시행 주체 : 약대협 TF국 및 수도권 약학대학 학생, 독거노인 지원 전문 유관단체(희망나눔협의회 등) / 시행 시기 : 당선 직후 서울시약사회 및 공단, 독거노인 지원 전문 유관단체(희망나눔협의회) 협의 → 6월 표준 매뉴얼 배포 및 참여자 모집 → 여름방학 시범 사업 운영</p>
                         </div>
                     </div>
                 `
@@ -1017,7 +1035,7 @@
                         <div>
                             <strong class="text-blue-800 text-lg block mb-2">방법론</strong>
                             <p>[전국 지부 협약 체결] (약대협 ↔ 마퇴본부 및 각 시도 지부) → [전문성 강화] (마퇴본부 역량강화 교육 이수) → [지역 기반 학교 매칭] (각 약학대학 인근 고교 우선 배정) → [멘토링 파견]</p>
-                            <p class="mt-2 text-sm text-gray-500">시행 주체 : 약대협 교육국, 한국마약퇴치운동본부 지부 / 시행 시기 : 5~6월 MOU 및 강사 양성 → 9~11월(2학기) 집중 멘토링</p>
+                            <p class="mt-2 text-sm text-gray-500">시행 주체 : 약대협 교육국, 한국마약퇴치운동본부 지부 / 시행 시기 : 5~6월 유관 기관 MOU 및 강사 양성 교육 → 여름방학 지역별 매칭 완료 → 9~11월(2학기) 전국 동시 집중 멘토링 진행</p>
                         </div>
                     </div>
                 `
@@ -1037,9 +1055,9 @@
                         <div>
                             <strong class="text-blue-800 text-lg block mb-2">방법론</strong>
                             <ul class="list-disc pl-5 space-y-1">
-                                <li><strong>민주적 절차를 준수하는 ‘패스트트랙’ 가동:</strong> [전략실 DB 기반 초안 작성] → [중앙상임위원회 대응 방안 논의] → [중앙운영위원회 최종 의결]로 이어지는 신속 의결 구조를 확립하겠습니다.</li>
-                                <li><strong>‘전략실’의 상설 모니터링 및 ‘논리 뱅크’ 구축:</strong> 전략실 주도로 대외 현안을 실시간 모니터링하고, 학생 참여자와 함께 이슈별 대응 논리를 사전에 DB화하여 준비하겠습니다.</li>
-                                <li><strong>객관적 지표에 따른 현안 단계 분류:</strong> [비상] 단계 등 사전에 합의된 매뉴얼에 근거하여 대응 등급을 투명하게 결정하겠습니다.</li>
+                                <li><strong>민주적 절차를 준수하는 ‘패스트트랙’ 가동:</strong> [전략실 DB 기반 초안 작성] → [중앙상임위원회 대응 방안 논의] → [중앙운영위원회 최종 의결]로 이어지는 신속 의결 구조를 확립하겠습니다. 긴급 의결 시 전 회원에게 결정 배경을 즉시 전달하고, 온라인 피드백 창구를 가동하여 회원 의견을 후속 조치에 실시간 반영하겠습니다.</li>
+                                <li><strong>‘전략실’의 상설 모니터링 및 ‘논리 뱅크’ 구축:</strong> 전략실 주도로 대외 현안을 실시간 모니터링하고, 학생 참여자와 함께 이슈별 대응 논리를 사전에 DB화하여 준비하겠습니다. 정책국과 역할을 분담하여 정무적 이슈(입법/대외 대응) 및 각 약학대학 내 현안(약학과 등록금 차등 인상, 타과 편입, 대학 통합 등)에 집중하도록 하겠습니다.</li>
+                                <li><strong>객관적 지표에 따른 현안 단계 분류:</strong> [비상]: 입법예고(10일) 내 의견 제출 필요 사안 또는 48시간 내 즉각 대응이 필요한 직능 침해 사안. 협회장단의 자의적 판단이 아닌, 사전에 합의된 매뉴얼에 근거하여 대응 등급을 투명하게 결정하겠습니다.</li>
                             </ul>
                             <p class="mt-2 text-sm text-gray-500">시행 주체 : 전략실 / 시행 시기 : 상시</p>
                         </div>
@@ -1061,9 +1079,9 @@
                         <div>
                             <strong class="text-blue-800 text-lg block mb-2">방법론</strong>
                             <ul class="list-disc pl-5 space-y-1">
-                                <li><strong>아이디어의 정책 인큐베이팅 및 고도화:</strong> 현안대응 DB 기반 핵심 주제를 선정한 후 아이디어톤 개최 → 수상 팀과 정책국이 협업하는 ‘정책 연구 펠로우십’ 운영하겠습니다.</li>
-                                <li><strong>전문가 자문을 통한 제안서의 공신력 확보:</strong> 대한약사회 정책연구소 및 교수진과의 멘토링을 통해 실무적 타당성 검증하고 전문성을 보완하겠습니다.</li>
-                                <li><strong>공식 전달 프로토콜 및 대외 활동 전개:</strong> 완성된 자료집을 보건복지부 약무정책과 및 국회 보건복지위원회 의원실에 공식 전달하고 간담회를 추진하겠습니다.</li>
+                                <li><strong>아이디어의 정책 인큐베이팅 및 고도화:</strong> 현안대응 DB 기반 핵심 주제를 선정한 후 아이디어톤 개최 → 수상 팀과 정책국이 협업하는 ‘정책 연구 펠로우십’ 운영하겠습니다. 단순 시상을 넘어 실제 통계 데이터와 법적 근거를 보강하여 학생 제안의 논리적 완성도를 높이겠습니다.</li>
+                                <li><strong>전문가 자문을 통한 제안서의 공신력 확보:</strong> 대한약사회 정책연구소 및 교수진과의 멘토링을 통해 실무적 타당성 검증하고 전문성을 보완하겠습니다. 국/영문 혼용의 공식 ‘Policy Paper’ 형태로 발간하여 대외적 전문성 및 격식 확보하겠습니다.</li>
+                                <li><strong>공식 전달 프로토콜 및 대외 활동 전개:</strong> 완성된 자료집을 보건복지부 약무정책과 및 국회 보건복지위원회 의원실에 공식 전달하겠습니다. 전달식 및 간담회를 추진하여 학생들의 아이디어가 입법 및 행정 가이드라인에 반영되도록 정책 세일즈를 수행하겠습니다.</li>
                             </ul>
                             <p class="mt-2 text-sm text-gray-500">시행 주체 : 정책국 / 시행 시기 : 방학 중 정책 아이디어톤 진행 → 2학기 내 [대정부 정책자료집] 발간</p>
                         </div>
@@ -1085,9 +1103,9 @@
                         <div>
                             <strong class="text-blue-800 text-lg block mb-2">방법론</strong>
                             <ul class="list-disc pl-5 space-y-1">
-                                <li><strong>정보 큐레이션을 통한 효율적 소통 체계 구축:</strong> 매달 중구난방으로 올라오던 공지를 핵심 위주로 정리하여 제공하겠습니다.</li>
-                                <li><strong>공약 이행 실황 중계 ‘신호등 대시보드’:</strong> [ 🔴 기획 - 🟡 협의/실행 - 🟢 완료] 3단계 시각화 지표를 통해 공약 진척도를 학우들에게 실시간으로 공개하겠습니다.</li>
-                                <li><strong>책임 있는 피드백 및 소통 창구 활성화:</strong> 특정 공약이 3개월 이상 ‘장기 검토 단계(노란불)’에 머물 경우, 지연 사유와 향후 대책을 상세히 공개하여 집행부의 책임 경영을 실현하겠습니다.</li>
+                                <li><strong>정보 큐레이션을 통한 효율적 소통 체계 구축:</strong> 매달 중구난방으로 올라오던 공지를 핵심 위주로 정리하여 제공하겠습니다. (▲공약 이행 상황, ▲주요 활동 보고, ▲중운위 회의 결과 등) 뉴스레터 템플릿과 자동화 툴을 활용하여 홍보국의 업무 효율을 높이고, 정보의 전달력은 극대화하겠습니다.</li>
+                                <li><strong>공약 이행 실황 중계 ‘신호등 대시보드’:</strong> [🔴기획 - 🟡협의/실행 - 🟢완료] 3단계 시각화 지표를 통해 공약 진척도를 학우들에게 실시간으로 공개하겠습니다. 진척도 산정 시 중앙운영위원회의 주기적인 검토와 확인을 거쳐, 공약 이행의 객관성과 신뢰성을 확보하겠습니다.</li>
+                                <li><strong>책임 있는 피드백 및 소통 창구 활성화:</strong> 특정 공약이 3개월 이상 ‘장기 검토 단계(노란불)’에 머물 경우, 지연 사유와 향후 대책을 상세히 공개하여 집행부의 책임 경영을 실현하겠습니다. 뉴스레터 내 익명 피드백 창구를 상설하여 학우들의 제안과 피드백을 협회 운영에 적극 반영하겠습니다.</li>
                             </ul>
                             <p class="mt-2 text-sm text-gray-500">시행 주체 : 홍보국 / 시행 시기 : 매월</p>
                         </div>
@@ -1108,8 +1126,8 @@
                         </div>
                         <div>
                             <strong class="text-blue-800 text-lg block mb-2">방법론</strong>
-                            <p>[해외 파트너 소싱] → [Track 1: Language Mate 가동] + [Track 2: Pharm-Log 제작] → [콘텐츠 배포 및 피드백]</p>
-                            <p class="mt-2 text-sm text-gray-500">시행 주체 : 약대협 국제국 및 정보통신국 / 시행 시기 : 3~4월 해외 파트너 컨택 → 5월 Language Mate 1기 모집</p>
+                            <p>[해외 파트너 소싱] (아시아권 및 영어권 약대 학생회, 대한약사회 해외 특별지부 컨택) → [Track 1: Language Mate 가동] (수요 조사 기반 1:1 매칭 및 화상 교류) + [Track 2: Pharm-Log 제작] (현지 약사/학생 V-log 소싱 및 교차 편집) → [콘텐츠 배포 및 피드백]</p>
+                            <p class="mt-2 text-sm text-gray-500">시행 주체 : 약대협 국제국 (해외 단체 컨택 및 인력 풀 관리) 및 정보통신국 (영상 편집 및 업로드) / 시행 시기 : 3~4월 해외 파트너 컨택 및 영상 소스 수집 → 5월 Language Mate 1기 모집 → 방학 중 브이로그 시즌 1 (한-미-일 비교 편) 공개</p>
                         </div>
                     </div>
                 `
@@ -1128,8 +1146,8 @@
                         </div>
                         <div>
                             <strong class="text-blue-800 text-lg block mb-2">방법론</strong>
-                            <p>[상황별 시나리오 기획] → [전문가 자문 및 감수] → [모바일 최적화 디자인] → [전 회원 무료 배포]</p>
-                            <p class="mt-2 text-sm text-gray-500">시행 주체 : 약대협 국제국 및 자문단 / 시행 시기 : 1학기 집필 → 여름방학 감수/디자인 → 2학기 배포</p>
+                            <p>[상황별 시나리오 기획] (Clinical/Research/Networking 파트 구성) → [전문가 자문 및 감수] (전공 교수진 및 대한약사회 청년이사 검수) → [모바일 최적화 디자인] (가독성을 높인 PDF 제작) → [전 회원 무료 배포]</p>
+                            <p class="mt-2 text-sm text-gray-500">시행 주체 : 약대협 국제국 (콘텐츠 기획/집필) 및 자문단 (내용 검증) / 시행 시기 : 1학기 자료 조사 및 집필 → 여름방학 전문가 감수 및 디자인 작업 → 2학기 최종 배포</p>
                         </div>
                     </div>
                 `
@@ -1149,12 +1167,15 @@
                         <div>
                             <strong class="text-blue-800 text-lg block mb-2">방법론</strong>
                             <ul class="list-disc pl-5 space-y-1">
-                                <li><strong>세부 사항:</strong> 홍보국 산하에 유튜브 앰배서더를 신설하고, 영상 기획·출연·촬영·편집 전 과정을 학생이 주도하도록 하겠습니다.</li>
-                                <li><strong>앰배서더 교육 프로그램 진행:</strong> 촬영 기초, 스크립트 작성법 등 1~2회 대면 미팅</li>
-                                <li><strong>콘텐츠 종류:</strong> 약대협 약학 퀴즈쇼, 36기 소개영상, Study with me, 약학대학 과목 티어리스트, 약대생 브이로그 등</li>
-                                <li><strong>1학기 목표:</strong> 최소 4편 제작, 편당 조회수 2500 이상, 구독자 1000명 이상</li>
+                                <li>세부 사항: 홍보국 산하에 유튜브 앰배서더를 신설하고, 영상 기획·출연·촬영·편집 전 과정을 학생이 주도하도록 하겠습니다.</li>
+                                <li>앰배서더 교육 프로그램 진행: 촬영 기초, 스크립트 작성법 등 1~2회 대면 미팅</li>
+                                <li>콘텐츠 제작 단계: 월별 일정표 수립 → 주제 선정 → 촬영 → 편집 → 업로드</li>
+                                <li>콘텐츠 종류: 약대협 약학 퀴즈쇼(5~10분, 최소 2인 진행), 36기 소개영상&입학 찬조 영상, 협회장단과의 Study with me, 약학대학 과목 티어리스트, 약대생 브이로그(3~5분, 현장 촬영 필수), 약대협 조직별 역할, 집행국원 인터뷰, 진로 정보 등으로 단계적 확장</li>
+                                <li>제작 팀 구성: 앰배서더 1~2명 + 편집 담당 1~2명, 책임 분배 명확화</li>
+                                <li>1학기 목표: 최소 4편 제작, 편당 조회수 2500 이상, 구독자 1000명 이상</li>
+                                <li>내부 평가 기준: 제작 편수, 조회수, 학생 설문 결과 → 2학기 계획 반영</li>
                             </ul>
-                            <p class="mt-2 text-sm text-gray-500">시행 주체 : 약대협 홍보국 / 시행 시기 : 1학기 동안 운영 후 평가를 통해 2학기 방향 결정</p>
+                            <p class="mt-2 text-sm text-gray-500">시행 주체 : 약대협 홍보국 / 시행 시기: 홍보국 및 앰배서더 모집 후 1학기 동안 운영하겠습니다. 1학기 운영 종료 후 콘텐츠 제작 편수, 조회수 및 구독자 수 등을 기준으로 내부 평가를 진행하고, 이를 바탕으로 2학기 운영 여부와 방향을 결정하겠습니다.</p>
                         </div>
                     </div>
                 `
@@ -1165,20 +1186,20 @@
                     <div class="space-y-4">
                         <div>
                             <strong class="text-blue-800 text-lg block mb-2">주요 내용</strong>
-                            <p>국/실 간 교류 활성화(지부별 소모임), 중앙운영위원회 캘린더 제작, 학교별 주요 행사 공유 캘린더 제작을 통해 협업과 정보 교류를 활성화하겠습니다.</p>
+                            <p>국/실 간 교류 활성화: 희망자를 대상으로 지부별 소모임을 구성하여 국·실 간 소통과 협업을 강화하고, 미션 수행을 통해 자연스러운 친목과 협업 경험을 제공하겠습니다. 중앙운영위원회 캘린더 제작: 회의별 주요 논의 사항과 의결 결과를 노션 캘린더에 정리하여, 중운위원들이 회의 흐름과 의사결정 과정을 손쉽게 확인할 수 있도록 하겠습니다. 학교별 주요 행사 공유 캘린더 제작: 전국 약학대학 주요 행사 일정을 공유하고, 각 학교의 사례를 참고할 수 있는 구조를 만들어 학교 간 협업과 정보 교류를 활성화하겠습니다.</p>
                         </div>
                         <div>
                             <strong class="text-blue-800 text-lg block mb-2">필요성</strong>
-                            <p>국/실 단위 업무는 효율적이지만, 협회 전체 차원의 소통과 협업에는 한계가 있어 운영진 간 소속감 약화와 정보 단절이 반복됩니다. 또한 중운위 회의 내용이나 학교별 행사 정보 공유가 미흡하여 체계적인 파악과 협업이 어려운 상황입니다.</p>
+                            <p>국/실 단위 업무는 효율적이지만, 협회 전체 차원의 소통과 협업에는 한계가 있어 운영진 간 소속감 약화와 정보 단절이 반복됩니다. 연간 20회 이상 개최되는 중운위 회의는 논의와 의결 사항이 누적되어 회의 흐름과 결정 과정을 체계적으로 파악하기 어렵습니다. 학교별 행사 정보가 공유되지 않아 타 학교 사례 참고가 어려우며, 협업과 정보 교류 구조가 미흡합니다.</p>
                         </div>
                         <div>
                             <strong class="text-blue-800 text-lg block mb-2">방법론</strong>
                             <ul class="list-disc pl-5 space-y-1">
-                                <li><strong>운영진 소모임:</strong> 지부별 소모임 구성, 월 1회 이상 미션 부여</li>
-                                <li><strong>중운위 캘린더:</strong> 노션 캘린더에 회의 논의 사항 및 의결 결과 기록, 회의록 링크 첨부</li>
-                                <li><strong>학교별 행사 공유 캘린더:</strong> 각 학교 학생회장이 공통 양식으로 행사 일정 입력, 연간 주요 행사 아카이빙</li>
+                                <li>운영진 소모임: 참여 희망자 조사 후 지부별 소모임 구성하겠습니다. 소모임별 월 1회 이상 미션 부여 하고 미션 수행 과정에서 자연스러운 교류를 유도하겠습니다. 미션 완료 시 간단한 결과 공유 및 피드백으로 참여 동기를 강화하겠습니다.</li>
+                                <li>중운위 캘린더: 노션 캘린더에 회의 날짜별 주요 논의 사항과 의결 결과를 기록하겠습니다. 회의록 링크 첨부하여 과거 회의 내용과 결정 사항 손쉽게 조회하도록 하겠습니다. 회의록 작성 완료 후 노션 캘린더에 기록하고, 중운위 전체 공유하겠습니다.</li>
+                                <li>학교별 행사 공유 캘린더: 각 학교 학생회장이 공통 양식으로 행사 일정 입력 → 취합 자료는 작성 학교에 우선 공유하고, 자발적 참여 유도하겠습니다. 연간 주요 행사 아카이빙으로 차기 집행부도 활용 가능하게 하겠습니다.</li>
                             </ul>
-                            <p class="mt-2 text-sm text-gray-500">시행 주체 : 기획국 / 전략실</p>
+                            <p class="mt-2 text-sm text-gray-500">시행 주체 : 기획국(운영진소모임) / 전략실(회의 및 행사 캘린더) / 시행 시기 : 집행국 모집 후 희망자 조사 실시, 7월까지 미션 진행 / 회의록 작성 완료 후 캘린더 순차 반영 / 1학기 개강 전 전국 행사 일정 일괄 취합</p>
                         </div>
                     </div>
                 `
@@ -1198,237 +1219,12 @@
                         <div>
                             <strong class="text-blue-800 text-lg block mb-2">방법론</strong>
                             <ul class="list-disc pl-5 space-y-1">
-                                <li><strong>명사특강:</strong> 지방권 약대생 대상 주제 선호도 조사 실시 → 관심도 높은 주제에 한해 오프라인 + 실시간 온라인 참여 제공하겠습니다. 온라인 참여자 질의응답 보완을 위해 질문 오픈채팅방을 운영하겠습니다.</li>
-                                <li><strong>팜일리타임:</strong> 활동 주제를 취미·친목 중심에서 스터디·창업 등 온라인 참여 가능한 분야로 확장하겠습니다. 지부 단위 또는 전국 단위로 소모임 구성, 참여 신청 전 주제 선호도 조사 진행하겠습니다.</li>
+                                <li>명사특강: 지방권 약대생 대상 주제 선호도 조사 실시 → 관심도 높은 주제에 한해 오프라인 + 실시간 온라인 참여 제공하겠습니다. 온라인 참여자 질의응답 보완: 질문 오픈채팅방 운영, 운영진이 질문 취합 후 현장에 전달 → 실질적 소통 가능하도록 하겠습니다.</li>
+                                <li>팜일리타임: 활동 주제를 취미·친목 중심에서 스터디·창업 등 온라인 참여 가능한 분야로 확장하겠습니다. 지부 단위 또는 전국 단위로 소모임 구성, 참여 신청 전 주제 선호도 조사 진행하겠습니다. 소모임 운영: 참여 인원, 주제, 일정, 온라인 회의 링크 등 세부 계획 공유 → 지속적 교류 가능하도록 하겠습니다.</li>
                             </ul>
-                            <p class="mt-2 text-sm text-gray-500">시행 주체 : 교육국 / 문화국</p>
+                            <p class="mt-2 text-sm text-gray-500">시행 주체 : 교육국(명사특강) / 문화국(팜일리타임) / 시행 시기 : 명사특강 전체 주제 확정 후 수요조사 실시 / 1학기 및 2학기 개강 전 관심 분야 조사 후 소모임 참여자 모집</p>
                         </div>
                     </div>
                 `
             }
         };
-
-        function openPolicyModal(key) {
-            const data = policyData[key];
-            if (!data) return;
-            document.getElementById('policy-tag').textContent = '상세 공약';
-            document.getElementById('policy-title').textContent = data.title;
-            document.getElementById('policy-subtitle').textContent = '';
-            document.getElementById('policy-content').innerHTML = data.content;
-            openModal('policy-modal');
-        }
-        function closePolicyModal() { closeModal('policy-modal'); }
-
-        // Experience Data & Modal
-        const expData = {
-            'student_council': {
-                title: '前 강원대학교 제37대 약학대학 학생회장',
-                content: `
-                    <div class="space-y-8">
-                        <div>
-                            <h4 class="font-bold text-xl text-navy mb-3">1. 제1회 청춘藥속 개최</h4>
-                            <img src="exp1_1.png" class="w-full md:w-3/5 h-auto rounded-lg my-4 shadow-sm mx-auto object-cover" alt="청춘약속 메인 이미지">
-                            
-                            <div class="space-y-2">
-                                <p class="text-sm md:text-base"><strong class="text-blue-600 block mb-1 text-lg">활동 배경</strong>
-                                기존 학생회 운영 구조상 학기 중 대규모 행사를 추가로 기획·운영하는 데 한계가 있었고, 이로 인해 1학기에는 약학대학 전체가 함께하는 핵심 행사가 부재했습니다. 그 결과 학생 간 교류가 학년·소그룹 단위로 고착화되는 경향이 나타났으며, 자연스러운 소통과 연대의 장을 마련할 필요성이 분명해졌습니다.</p>
-                            </div>
-
-                            <div class="space-y-2 mt-4">
-                                <p class="text-sm md:text-base"><strong class="text-blue-600 block mb-1 text-lg">활동 내용</strong>
-                                <div class="grid grid-cols-2 gap-2 my-2 md:w-3/5 md:mx-auto">
-                                    <img src="exp1_2.png" class="w-full h-auto rounded shadow-sm object-cover">
-                                    <img src="exp1_3.png" class="w-full h-auto rounded shadow-sm object-cover">
-                                </div>
-                                학년 구분 없이 누구나 부담 없이 참여할 수 있는 교류형 행사로 ‘제1회 청춘藥속’을 기획·운영했습니다. 접근성을 최우선으로 고려해 약학관 주차장을 행사 공간으로 선정하고, 학장단·학과사무실·인근 단과대학과의 공식 협조를 통해 수업 직후 바로 참여할 수 있는 동선을 구축했습니다.<br>
-                                행사는 체험형 부스와 학년 혼합 교류 프로그램을 중심으로 구성했습니다. 다양한 참여형 부스를 운영하고, 동아리 부스를 별도로 구성해 학생 자치 조직이 함께 참여할 수 있도록 했습니다. 또한 2인 단위 신청 후 학년을 섞은 조 편성을 통해 식사와 레크리에이션을 함께 진행하며 자연스러운 교류가 이루어지도록 설계했습니다.</p>
-                            </div>
-
-                            <div class="space-y-2 mt-4">
-                                <p class="text-sm md:text-base"><strong class="text-blue-600 block mb-1 text-lg">성과 및 의의</strong>
-                                <img src="exp1_4.png" class="w-full md:w-3/5 h-auto rounded-lg my-2 shadow-sm mx-auto object-cover">
-                                전체 재학생 약 300명 중 130명 이상이 참여하며, 학기 중 핵심 교류 행사로서 실질적인 참여를 이끌어냈습니다. 교내 사업 공모를 통해 지원금을 확보하고, 교내 단체 간 협력을 통해 물품을 대여함으로써 예산을 효율적으로 운영했습니다. 해당 행사는 영상 콘텐츠로 기록되어 학생들의 체감을 높였으며, 차기 학생회 공약으로 이어져 지속 가능한 행사로 정착할 기반을 마련했습니다.<br>
-                                청춘藥속은 학생 간 교류가 자연스럽게 확장될 수 있음을 확인한 계기였으며, 공동체 문화는 의도적으로 설계될 때 형성된다는 확신을 주었습니다. 이 경험을 통해 교류와 소통은 부수적인 요소가 아니라 조직을 하나로 묶는 핵심이라는 인식을 갖게 되었고, 이는 유튜브 활성화, 지역 경계 없는 교류, 하나로 연결되는 약대협을 지향하는 Community & Culture 공약으로 이어지게 되었습니다.</p>
-                            </div>
-                        </div>
-
-                        <hr class="border-slate-200">
-
-                        <!-- 2. 북플리마켓 -->
-                        <div>
-                            <h4 class="font-bold text-xl text-navy mb-3">2. 북플리마켓 아카이빙 체계 구축</h4>
-                            <img src="exp2_1.png" class="w-full md:w-3/5 h-auto rounded-lg my-4 shadow-sm mx-auto object-cover">
-                            
-                            <div class="grid grid-cols-2 gap-2 my-4 md:w-3/5 md:mx-auto">
-                                <img src="exp2_2.png" class="w-full h-auto rounded shadow-sm object-cover">
-                                <img src="exp2_3.png" class="w-full h-auto rounded shadow-sm object-cover">
-                            </div>
-
-                            <div class="space-y-4">
-                                <p class="text-sm md:text-base"><strong class="text-blue-600 block mb-1 text-lg">활동 배경</strong>
-                                학생회 사업이 담당자나 집행부에 따라 단절되며, 매년 동일한 혼선이 반복되는 구조적 한계를 체감했습니다. 단순히 행사를 잘 치르는 것을 넘어, 기록과 기준이 남지 않으면 성과가 축적되지 않는다는 문제의식이 생겼습니다.</p>
-
-                                <p class="text-sm md:text-base"><strong class="text-blue-600 block mb-1 text-lg">활동 내용</strong>
-                                강원대학교 약학대학 학생회장으로서 북플리마켓 운영을 계기로, 학생회 자산과 사업을 아카이빙하는 방식의 필요성을 인식하고 실행했습니다. 누적된 교재를 전수 조사해 도서명·판수·버전 기준으로 정리하고 문서화했으며, 학생 수요에 맞지 않는 오래된 판수는 정리해 관리 기준을 명확히 했습니다. 이후 다른 학생회 활동에서도 자료 정리와 기록을 우선하는 운영 방식을 적용했습니다.</p>
-
-                                <p class="text-sm md:text-base"><strong class="text-blue-600 block mb-1 text-lg">성과 및 의의</strong>
-                                학생회 사업이 개인의 기억이 아닌 데이터와 기록으로 이어질 수 있는 구조를 마련했습니다. 이 경험을 통해 아카이빙과 DB 구축이 학생자치의 연속성을 만든다는 확신을 갖게 되었고, 이는 이후 협회 차원의 공약으로 구체화되는 출발점이 되었습니다.</p>
-                            </div>
-                        </div>
-
-                        <hr class="border-slate-200">
-
-                        <!-- 3. 실무실습 -->
-                        <div>
-                            <h4 class="font-bold text-xl text-navy mb-3">3. 실무실습 제도 개선 건의 및 간담회 추진</h4>
-                            
-                            <div class="space-y-4">
-                                <p class="text-sm md:text-base"><strong class="text-blue-600 block mb-1 text-lg">활동 배경</strong>
-                                2025년 학생회장으로 활동하며 실무실습을 준비·수행하는 학생들이 반복적으로 혼란과 불편을 겪고 있음을 확인했습니다. 실습지 배정, 숙소 정보, 예방접종 안내 등 주요 사안이 충분히 공유되지 않은 채 진행되면서, 학생들이 제도의 문제를 개인의 부담으로 감내하고 있다는 점이 가장 큰 문제라고 느꼈습니다. 이는 단순한 불만이 아니라 학생사회 차원에서 공식적으로 전달되어야 할 현안이라고 판단했습니다.</p>
-
-                                <p class="text-sm md:text-base"><strong class="text-blue-600 block mb-1 text-lg">활동 내용</strong>
-                                실습을 경험한 학생들의 의견을 체계적으로 수렴하였고, 이를 정리하여 학생회 명의로 학장님과 학과장님께 직접 방문해 공식적으로 건의드렸습니다. 이 과정에서 학생들의 개별 불만이 아닌, 공통적으로 반복된 구조적 문제임을 중심으로 설명하였으며, 이후 교수진과 학생 간의 오해를 줄이고 논의를 이어가기 위해 간담회 형식의 대화 자리를 제안·추진하였습니다. 이후 학생회와 교수진이 함께 참여하는 간담회로 확장하여 해당 사안들을 공유하고 논의했습니다.</p>
-
-                                <p class="text-sm md:text-base"><strong class="text-blue-600 block mb-1 text-lg">성과 및 의의</strong>
-                                학생들의 현안이 비공식적인 불만 제기를 넘어, 학교 차원의 공식 논의 안건으로 다뤄지는 계기가 마련되었습니다. 특히 간담회 형식을 통해 학생 의견이 직접 전달되면서 제도 개선에 대한 공감대가 형성되었고, 일부 사안은 실제 제도 개편 논의로 이어졌습니다. 이 경험을 통해 학생사회의 문제는 관심에서 그치는 것이 아니라, 의견을 수렴하고 정리해 적절한 의사결정 주체에게 전달할 때 변화로 이어질 수 있다는 점을 분명히 체감하게 되었습니다.</p>
-                            </div>
-                            <img src="exp3_1.png" class="w-full md:w-3/5 h-auto rounded-lg my-4 shadow-sm mx-auto object-cover">
-                        </div>
-                    </div>
-                `
-            },
-            'it_bureau': {
-                title: '前 약대협 정보통신국 차장',
-                content: `
-                    <div class="space-y-8">
-                        <div>
-                            <h4 class="font-bold text-xl text-navy mb-3">1. 제2회 약대생 정책 아이디어톤 공식 기사 작성</h4>
-                            <img src="exp_it_1.png" class="w-full md:w-3/5 h-auto rounded-lg my-4 shadow-sm mx-auto object-cover">
-                            
-                            <div class="space-y-4">
-                                <p class="text-sm md:text-base"><strong class="text-blue-600 block mb-1 text-lg">활동 개요</strong>
-                                약대협 정책국 주관으로 진행된 제2회 약대생 정책 아이디어톤 현장에 참여하여, 행사 전반과 학생 정책 제안을 정리한 공식 기사 작성을 담당했습니다.</p>
-
-                                <p class="text-sm md:text-base"><strong class="text-blue-600 block mb-1 text-lg">역할 및 활동 내용</strong>
-                                무박 2일간 진행된 정책 아이디어톤 전 과정을 현장에서 함께하며, 정책 강연, 팀별 토론, 발표 및 심사 과정을 직접 확인했습니다. 참가 학생들의 발표 내용을 녹음·정리하여 핵심 정책 제안을 축약·가공했고, 심사위원단의 평가와 코멘트를 반영해 기사로 구성했습니다. 완성된 기사는 약대협 KPSA의 정책 활동을 외부에 정확히 전달하는 데 초점을 두고 작성했습니다.</p>
-
-                                <p class="text-sm md:text-base"><strong class="text-blue-600 block mb-1 text-lg">성과 및 의의</strong>
-                                작성된 기사는 약사공론과 데일리팜 등 주요 약업계 언론에 게재되어, 약대생 정책 논의가 학생사회 내부를 넘어 약업계와 전문가 집단에 공유되는 계기를 마련했습니다. 특히 일부 심사위원은 학생들의 정책 아이디어를 실제 정책 논의에 참고했다고 언급하며, 약대생 정책 제안의 실질적 가능성을 확인했습니다. 이를 통해 약대협 정책 활동이 기록과 아카이빙을 넘어, 장기적으로 대정부 정책자료로 확장될 수 있는 기반을 보여주었습니다.</p>
-                            </div>
-                        </div>
-
-                        <hr class="border-slate-200">
-
-                        <div>
-                            <h4 class="font-bold text-xl text-navy mb-3">2. 국민건강보험공단 견학 참석 및 기사 작성</h4>
-                            <img src="exp_it_2.png" class="w-full md:w-3/5 h-auto rounded-lg my-4 shadow-sm mx-auto object-cover">
-                            
-                            <div class="space-y-4">
-                                <p class="text-sm md:text-base"><strong class="text-blue-600 block mb-1 text-lg">활동 개요</strong>
-                                약대협 정보통신국 차장으로서 국민건강보험공단 견학 프로그램에 참석하고, 해당 활동을 기사로 정리·발행함.</p>
-
-                                <p class="text-sm md:text-base"><strong class="text-blue-600 block mb-1 text-lg">활동 내용</strong>
-                                국민건강보험공단 견학 프로그램에 참석하여 공단에서 약사의 역할과 주요 업무, 윤리 교육을 중심으로 한 연사 강연을 청취하고 질의응답에 참여했습니다. 이후 인근 전시관을 방문해 노인복지 및 건강 관련 보조기기를 관람하며, 약대생의 전공이 사회 현장에서 어떻게 활용되는지를 직접 체감했습니다. 이러한 경험을 바탕으로 프로그램의 구성과 의미를 정리해 기사로 작성하였으며, 현장에 참여하지 못한 약대생들도 공공기관 진로와 업무 환경을 이해할 수 있도록 내용을 전달했습니다.</p>
-
-                                <p class="text-sm md:text-base"><strong class="text-blue-600 block mb-1 text-lg">성과 및 의의</strong>
-                                현장에 참석하지 못한 다수의 약대생들도 국민건강보험공단이라는 기관의 역할과 근무 환경, 사회적 책임에 대해 간접적으로 이해할 수 있는 계기를 만들었습니다. 이 경험을 통해 단순한 기관 소개와 기사 작성뿐만 아니라, ‘그곳에서 실제로 어떤 하루를 보내는지’를 전달하는 콘텐츠의 필요성을 분명히 느꼈고, 이후 약대생들이 다양한 조직과 직무를 보다 입체적으로 경험할 수 있는 현장 중심 진로 프로그램을 구상하게 되는 계기가 되었습니다.</p>
-                            </div>
-                        </div>
-
-                        <hr class="border-slate-200">
-
-                        <div>
-                            <h4 class="font-bold text-xl text-navy mb-3">3. 2025 한국약학대학생 학술제(CoPharmForum) 참석 및 기사 작성</h4>
-                            <img src="exp_it_3.png" class="w-full md:w-3/5 h-auto rounded-lg my-4 shadow-sm mx-auto object-cover">
-                            
-                            <div class="space-y-4">
-                                <p class="text-sm md:text-base"><strong class="text-blue-600 block mb-1 text-lg">활동 개요</strong>
-                                약대협 정보통신국 차장으로서 2025 한국약학대학생 학술제(CoPharmForum)에 참석하여 학술 발표 및 강연 세션을 취재하고, 행사 전반을 기사로 정리·발행함.</p>
-
-                                <p class="text-sm md:text-base"><strong class="text-blue-600 block mb-1 text-lg">활동 내용</strong>
-                                수도권 약학대학 학술동아리 연합(PAMS)과 약대협이 공동 주최한 CoPharmForum에 참석하여, 희귀·난치질환 치료제, 디지털 약료, 약물 설계·전달, 약물 규제·안전성 등 4개 분야에서 본선에 진출한 8개 팀의 학술 발표를 청취했습니다. 교수진과 약학정보원장을 포함한 심사위원단의 평가 과정과 질의응답을 현장에서 지켜보며, 약대생 연구 역량의 수준을 직접 확인했습니다.<br>
-                                또한 변준호 숙명여대 교수의 바이오의약품 전달기술 강연, 김수경 부본부장의 의약품 안전성과 윤리를 주제로 한 강연 등 주요 세션을 정리하고, 학생 발표 내용과 수상자 인터뷰를 포함해 학술제 전반을 기사로 기록했습니다.</p>
-
-                                <p class="text-sm md:text-base"><strong class="text-blue-600 block mb-1 text-lg">성과 및 의의</strong>
-                                학술제를 통해 약대생 개개인의 연구 역량과 가능성은 매우 높다는 점을 확인했으나, 실제 행사에 참여하는 인원이 제한적이라는 한계 또한 분명히 느꼈습니다. 우수한 학술 성과가 소수의 참여자에게만 축적되는 구조로는 전체 약대생의 실력 향상으로 이어지기 어렵다고 판단했습니다.<br>
-                                이 경험을 계기로, 특정 행사 참여 여부와 관계없이 전체 약대생이 학습 역량을 체계적으로 강화할 수 있는 구조가 필요하다는 문제의식이 확고해졌고, 국가고시 핵심 과목을 중심으로 한 학습 자료 발간, 비대면 기반의 Micro Degree 등 보다 많은 학생이 참여할 수 있는 실력 중심 공약을 구상하게 되었습니다.</p>
-                            </div>
-                        </div>
-                    </div>
-                `
-            },
-            'steering': {
-                title: '現 약대협 중앙운영위원',
-                content: `
-                    <div class="space-y-8">
-                        <div>
-                            <h4 class="font-bold text-xl text-navy mb-3">1. 병역 제도 관련 대외 정책 논의 참여</h4>
-                            
-                            <div class="space-y-4">
-                                <p class="text-sm md:text-base"><strong class="text-blue-600 block mb-1 text-lg">활동 배경</strong>
-                                이전에 강원대학교 약학대학 재학생을 대상으로 전문약제병 진로 강연을 기획·운영하며, 군 복무를 마친 약제병 선배로부터 실제 약무 업무 환경과 제도 운영에 대한 설명을 직접 접한 경험이 있습니다. 이를 통해 문서나 공지로는 드러나지 않는 제도 운영의 현실과, 약대생들이 병역 제도를 선택하는 과정에서 체감하는 정보 격차를 인식하게 되었습니다. 이러한 배경 속에서, 중앙운영위원으로서 병역 제도 논의가 이루어지는 자리에서 현장의 관점을 전달하고 실질적인 질의와 논의를 진행할 필요가 있다고 판단했습니다.</p>
-
-                                <p class="text-sm md:text-base"><strong class="text-blue-600 block mb-1 text-lg">활동 내용</strong>
-                                약대협 중앙운영위원으로서 국회의원 국방위원장실 비서관, 국방부 육군 행정사무관, 병무청 행정사무관이 참석한 병역 제도 관련 대면 논의에 참여했습니다. 정책국장이 준비한 발제자료를 사전에 검토하고 제 의견을 반영했으며, 현장에서는 주요 질의와 논의를 주도하며 전문약제병 모집 구조, 병역 유형별 제도 차이, 지원 시기와 자격 문제를 중심으로 질문과 의견을 제시했습니다. 특히 군필자로서 실제 복무 경험을 바탕으로, 제도 개선이 가능한 지점과 현실적으로 어려운 부분을 구분해 논의를 이끌었습니다.</p>
-
-                                <p class="text-sm md:text-base"><strong class="text-blue-600 block mb-1 text-lg">성과 및 의의</strong>
-                                전문약제병 증원 검토, 예방적 약무 업무 확대 가능성, 공보의·공보약 제도 논의의 행정적 관할 등 병역 제도 개선 논의의 현실적 범위를 명확히 확인했습니다. 이를 통해 약대생 병역 문제가 단순한 요구가 아니라, 구체적인 행정 구조와 책임 체계 속에서 다뤄져야 할 정책 과제임을 현장에서 공유할 수 있었습니다.<br>
-                                또한 회의 과정에서 제기된 질의와 답변이 일회성 논의로 소모되기보다는, 향후 유사한 문제 제기 시 참고할 수 있는 정리된 기록으로 남을 필요성을 체감했습니다. 이러한 경험은 이후 약대생 현안에 대해 의견을 수렴하고 정제해 축적하는 방식의 중요성을 인식하게 만든 계기가 되었으며, 개인적으로 정책 제안을 준비하는 태도와 문제 접근 방식에 분명한 기준을 남겼습니다.</p>
-                            </div>
-                            <img src="exp_steering_1.png" class="w-full md:w-3/5 h-auto rounded-lg my-4 shadow-sm mx-auto object-cover">
-                        </div>
-                    </div>
-                `
-            }
-        };
-
-        function openExpModal(key) {
-            const data = expData[key];
-            if (!data) return;
-            document.getElementById('exp-title').textContent = data.title;
-            document.getElementById('exp-content').innerHTML = data.content;
-            openModal('exp-modal');
-        }
-        function closeExpModal() { closeModal('exp-modal'); }
-
-        // General Modal Helper
-        function openModal(id) {
-            const modal = document.getElementById(id);
-            modal.classList.remove('hidden');
-            setTimeout(() => {
-                modal.classList.remove('opacity-0');
-                if(modal.querySelector('div')) {
-                    modal.querySelector('div').classList.remove('scale-95');
-                    modal.querySelector('div').classList.add('scale-100');
-                    
-                    // 모달이 열릴 때 내부 스크롤을 최상단으로 강제 초기화
-                    const scrollableContent = modal.querySelector('.overflow-y-auto');
-                    if (scrollableContent) {
-                        scrollableContent.scrollTop = 0;
-                    }
-                }
-            }, 10);
-            document.body.style.overflow = 'hidden';
-        }
-        function closeModal(id) {
-            const modal = document.getElementById(id);
-            modal.classList.add('opacity-0');
-            if(modal.querySelector('div')) {
-                modal.querySelector('div').classList.remove('scale-100');
-                modal.querySelector('div').classList.add('scale-95');
-            }
-            setTimeout(() => modal.classList.add('hidden'), 300);
-            document.body.style.overflow = 'auto';
-        }
-
-        // Close on Escape
-        document.addEventListener('keydown', function(event) {
-            if (event.key === "Escape") {
-                closePoster();
-                closePolicyModal();
-                closeExpModal();
-            }
-        });
-    </script>
-</body>
-</html>
