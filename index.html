@@ -351,7 +351,7 @@
                             </li>
                             <li class="policy-item" onclick="openPolicyModal('contest')">
                                 <i data-lucide="chevron-right" class="w-4 h-4 inline-block mr-1 text-blue-500"></i>
-                                <span class="highlight">제약사 × KPSA : 과제 해결 경진대회</span>
+                                <span class="highlight">제약사 × KPSA ： 과제 해결 경진대회</span>
                             </li>
                             <li class="policy-item" onclick="openPolicyModal('interview')">
                                 <i data-lucide="chevron-right" class="w-4 h-4 inline-block mr-1 text-blue-500"></i>
@@ -430,7 +430,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                 <!-- Global Insight -->
-                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-3xl border border-white/10 hover:bg-white/20 transition cursor-pointer" onclick="openPolicyModal('global')" data-aos="flip-up">
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-3xl border border-white/10 hover:bg-white/20 transition" data-aos="flip-up">
                     <i data-lucide="globe" class="w-10 h-10 text-blue-300 mb-5"></i>
                     <h3 class="text-2xl font-bold mb-1">Global Insight</h3>
                     <p class="text-blue-200 font-medium mb-3">글로벌 역량을 갖춘 약대생으로</p>
@@ -447,7 +447,7 @@
                 </div>
 
                 <!-- Community & Culture -->
-                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-3xl border border-white/10 hover:bg-white/20 transition cursor-pointer" onclick="openPolicyModal('community')" data-aos="flip-up" data-aos-delay="200">
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-3xl border border-white/10 hover:bg-white/20 transition" data-aos="flip-up" data-aos-delay="200">
                     <i data-lucide="users" class="w-10 h-10 text-pink-300 mb-5"></i>
                     <h3 class="text-2xl font-bold mb-1">Community & Culture</h3>
                     <p class="text-pink-200 font-medium mb-3">하나되는 약대생, 즐거운 연대로</p>
@@ -803,7 +803,7 @@
             document.body.style.overflow = 'auto';
         }
 
-        // 16 Detailed Policy Data (Correctly Mapped)
+        // 16 Detailed Policy Data
         const policyData = {
             'toolkit': {
                 title: 'Pharm Study Toolkit 제작',
@@ -821,12 +821,19 @@
                             <strong class="text-blue-800 text-lg block mb-2">방법론</strong>
                             <ul class="list-disc pl-5 space-y-1">
                                 <li>약물학 등의 비교적 학교별 표준화된 주요 과목들부터 우선 시행하겠습니다.</li>
-                                <li>제작 초기 단계에서 한국약학교육협의회(약교협)와 협의를 추진하여, 표준화된 과목들의 핵심 교육 목표와 출제 경향을 자문받아 공신력 있는 가이드라인을 수립하겠습니다.</li>
+                                <li>제작 초기 단계에서 <strong>한국약학교육협의회(약교협)</strong>와 협의를 추진하여, 표준화된 과목들의 핵심 교육 목표와 출제 경향을 자문받아 공신력 있는 가이드라인을 수립하겠습니다.</li>
                                 <li>약대협 교육국 주도 하에, 다수의 약대생 인터뷰를 더하여 체계적인 내용으로 정립하겠습니다.</li>
                                 <li>학습 보조 프로그램 (예: 암기 보조 앱인 퀴즐렛, 약물 트리를 제작 앱)을 활용하여, 암기·시각화 등을 보조할 수 있는 앱을 정리하여 활용 방법을 소개하겠습니다.</li>
                                 <li>“Community&Culture” 분야 공약인 KPSA 유튜브와 연계하여, 영상으로 정리함으로써 전달력을 높이겠습니다.</li>
                             </ul>
-                            <p class="mt-2 text-sm text-gray-500">시행 주체 : 약대협 교육국 / 시행 시기 : 2월 중 시작하여, 2학기 시작 전 1차 배포</p>
+                            <div class="mt-4 p-4 bg-gray-50 rounded-lg text-sm">
+                                <p class="mb-1"><span class="font-bold text-navy">시행 주체 :</span></p>
+                                <ul class="list-disc pl-5 mb-2">
+                                    <li><strong>약대협 교육국 :</strong> Pharm Study Toolkit 구조화, 인터뷰이(Interviewee) 모집 및 인터뷰, 정리본 제작</li>
+                                    <li><strong>약대협 홍보국 :</strong> KPSA 유튜브 컨텐츠 기획 및 촬영 감독</li>
+                                </ul>
+                                <p><span class="font-bold text-navy">시행 시기 :</span> 2월 중 시작하여, 2학기 시작 전 1차 배포</p>
+                            </div>
                         </div>
                     </div>
                 `
@@ -1182,13 +1189,13 @@
                         </div>
                         <div>
                             <strong class="text-blue-800 text-lg block mb-2">필요성</strong>
-                            <p>약대협 행사는 주로 수도권에서 운영되어 지방권 약대생은 참여가 어렵습니다. 지역에 따른 기회 격차를 해소하고, 약대협 활동이 일부 학생에 국한되지 않도록 지역과 관계없이 참여할 수 있는 운영 방식이 필요합니다.</p>
+                            <p>약대협 행사는 주로 수도권에서 운영되어 지방권 약대생은 이동 시간과 비용 등의 제약으로 참여가 어렵습니다. 지방권에서 행사를 개최하더라도 참여 인원이 제한되어 행사를 확대하기 어려우며, 이로 인해 지역에 따른 기회 격차가 지속됩니다. 약대협 활동이 일부 학생에 국한되지 않기 위해, 지역과 관계없이 참여할 수 있는 운영 방식이 필요합니다.</p>
                         </div>
                         <div>
                             <strong class="text-blue-800 text-lg block mb-2">방법론</strong>
                             <ul class="list-disc pl-5 space-y-1">
-                                <li><strong>명사특강:</strong> 지방권 약대생 대상 주제 선호도 조사 실시 → 온·오프라인 병행. 질문 오픈채팅방 운영으로 실질적 소통 보완.</li>
-                                <li><strong>팜일리타임:</strong> 활동 주제를 스터디·창업 등 온라인 참여 가능한 분야로 확장. 지부 단위 또는 전국 단위로 소모임 구성.</li>
+                                <li><strong>명사특강:</strong> 지방권 약대생 대상 주제 선호도 조사 실시 → 관심도 높은 주제에 한해 오프라인 + 실시간 온라인 참여 제공하겠습니다. 온라인 참여자 질의응답 보완을 위해 질문 오픈채팅방을 운영하겠습니다.</li>
+                                <li><strong>팜일리타임:</strong> 활동 주제를 취미·친목 중심에서 스터디·창업 등 온라인 참여 가능한 분야로 확장하겠습니다. 지부 단위 또는 전국 단위로 소모임 구성, 참여 신청 전 주제 선호도 조사 진행하겠습니다.</li>
                             </ul>
                             <p class="mt-2 text-sm text-gray-500">시행 주체 : 교육국 / 문화국</p>
                         </div>
@@ -1214,6 +1221,7 @@
                 title: '前 강원대학교 제37대 약학대학 학생회장',
                 content: `
                     <div class="space-y-8">
+                        <!-- 1. 청춘약속 -->
                         <div>
                             <h4 class="font-bold text-xl text-navy mb-3">1. 제1회 청춘藥속 개최</h4>
                             <img src="exp1_1.png" class="w-full md:w-3/5 h-auto rounded-lg my-4 shadow-sm mx-auto object-cover" alt="청춘약속 메인 이미지">
@@ -1248,6 +1256,7 @@
                             <h4 class="font-bold text-xl text-navy mb-3">2. 북플리마켓 아카이빙 체계 구축</h4>
                             <img src="exp2_1.png" class="w-full md:w-3/5 h-auto rounded-lg my-4 shadow-sm mx-auto object-cover">
                             
+                            <!-- Side by side -->
                             <div class="grid grid-cols-2 gap-2 my-4 md:w-3/5 md:mx-auto">
                                 <img src="exp2_2.png" class="w-full h-auto rounded shadow-sm object-cover">
                                 <img src="exp2_3.png" class="w-full h-auto rounded shadow-sm object-cover">
