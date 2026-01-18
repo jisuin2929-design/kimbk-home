@@ -87,8 +87,9 @@
         .slider-container {
             overflow: hidden;
             position: relative;
-            touch-action: pan-y;
+            /* touch-action: pan-y;  <-- 이 부분을 제거하거나 pan-x pan-y 모두 고려해야 함. JS로 제어하므로 일단 제거 */
             user-select: none;
+            touch-action: pan-y; /* 수직 스크롤은 허용하되 수평 스와이프는 JS로 처리 */
         }
         .slider-track {
             display: flex;
@@ -732,10 +733,16 @@
         lucide.createIcons();
         AOS.init({ once: true, offset: 80, duration: 800 });
 
-        // Policy Download Alert Logic
+        // Policy Download Logic
         function downloadPolicy() {
-            // alert() 대신 커스텀 모달 사용
-            openModal('alert-modal');
+            // 파일을 바로 다운로드하도록 수정
+            const link = document.createElement('a');
+            // 정책자료집 파일 경로 설정 (같은 폴더에 파일이 있다고 가정)
+            link.href = '정책자료집_김백건.pdf'; 
+            link.download = '정책자료집_김백건.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         }
 
         function closeAlert() {
